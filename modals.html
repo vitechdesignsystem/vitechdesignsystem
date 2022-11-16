@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Vitech DS - Modals</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="css/materialdesignicons.css">
+  <link rel="stylesheet/less" type="text/css" href="css/components.less">
+  <link rel="stylesheet/less" type="text/css" href="css/style.less">
+
+  <script src="scripts/less.js"></script>
+  <script src="scripts/jquery.js"></script>
+  <script src="scripts/materialize.min.js"></script>
+  <script type="text/javascript" src="scripts/jquery.scrollTo.min.js"></script>
+  <script src="scripts/components.js"></script>
+  <script src="scripts/ui.js"></script>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body class="">
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <a href="index.html">
+        <div class="DSLogo"></div>
+        <div class="DSName">Design System</div>
+        <div class="DSVersion">v 1.01</div>
+      </a>
+    </div>
+    <div class="top-bar-right">
+      <ul class="top-bar-nav">
+        <li><a href="principles.html">Principles & Guidelines</a></li>
+        <li class="active"><a href="#">Components</a></li>
+        <li><a>IxD Patterns</a></li>
+        <li><a href="colors.html">Foundations</a></li>
+        <li><a>Content</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="left-sidebar">
+    <ul class="desktop-sidenav">
+      <li><a href="buttons.html">Buttons</a></li>
+      <li><a href="inputfields.html">Input fields</a></li>
+      <li><a href="selection.html">Selection</a></li>
+      <!-- <li><a>Cards</a></li> -->
+      <li><a href="lists.html">Lists</a></li>
+      <li><a href="tables.html">Tables</a></li>
+      <li><a href="widgets.html">Widgets</a></li>
+      <li class="active"><a>Modals</a></li>
+      <!-- <li><a>Navigation</a></li> -->
+    </ul>
+  </div>
+  <!-- <div class="page-anchor-nav" id="designGuidelinesNav">
+    <p class="anchor-nav-header">Page Nav</p>
+    <ul class="anchor-nav">
+      <li class="active" data-scroll-target="#regularInputs">Regular</li>
+      <li data-scroll-target="#withIcon">With Icon</li>
+      <li data-scroll-target="#smallInputs">Small</li>
+      <li data-scroll-target="#floatingButtons">Textareas</li>
+      <li data-scroll-target="#iconButtons">Outlined</li>
+    </ul>
+  </div>
+  <div class="page-anchor-nav" id="usecasesNav" style="display: none;">
+    <p class="anchor-nav-header">Page Nav</p>
+    <ul class="anchor-nav">
+      <li class="active" data-scroll-target="#inWidgets">In Widgets</li>
+      <li data-scroll-target="#inModals">In Modals</li>
+      <li data-scroll-target="#inContent">Content</li>
+      <li data-scroll-target="#inOther">Other</li>
+    </ul>
+  </div> -->
+  <div class="page-anchor-nav" id="designGuidelinesNav">
+    <p class="anchor-nav-header">Page Nav</p>
+    <ul class="table-of-contents anchor-nav">
+      <li><a href="#defaultModal">Default Modal</a></li>
+      <li><a href="#fullPageModal">Full Page Modal</a></li>
+      <li><a href="#mobileModal">Mobile Modal</a></li>
+    </ul>
+  </div>
+  <div class="content-wrapper">
+    <h3 class="h3">Modals</h3>
+    <p class="page-description">Modals present an expanded view of a list item or may be used to receive user inputs in forms. There are a few variants of modals used in appropriate situations.</p>
+    <div class="tabs-wrapper">
+      <div class="tabs-hoz" id="buttonsPageTabs">
+        <ul class="tabs-list">
+          <li class="active" data-tabs-target="#designGuidelines">Design Guidelines</li>
+          <li data-tabs-target="#useCases">Use Cases</li>
+          <!-- <li data-tabs-target="#code">Code</li> -->
+        </ul>
+      </div>
+      <div class="tabs-hoz-container active" id="designGuidelines">
+        <div class="scrollspy" id="defaultModal">
+            <div class="section-header">
+                <div class="header-top">
+                    <h4 class="h4" id="regularButtons">Default Modal</h4>
+                </div>
+                <p class="section-description">Use a default modal for quick user inputs or small wizards with limited functionality.</p>
+            </div>
+            <span class="button-primary waves-effect waves-light modal-trigger" href="#modal1">Open default modal</span>
+            <div id="modal1" class="modal modal-fixed-footer">
+                <div class="modal-header">
+                    <span class="h6Medium">H6 Modal name</span>
+                    <svg class="close-icon modal-close" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30 12.0275L22.0275 20L30 27.9725L27.9725 30L20 22.0275L12.0275 30L10 27.9725L17.9725 20L10 12.0275L12.0275 10L20 17.9725L27.9725 10L30 12.0275Z"/>
+                    </svg>
+                </div>
+                <div class="modal-content">
+                    <div class="stepper">
+                        <div class="step-single complete">
+                            <div class="step-number">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.1195 1.97522L4.47953 10.6152L0.519531 6.65522L1.53473 5.64002L4.47953 8.57762L12.1043 0.960022L13.1195 1.97522Z"/>
+                                </svg>                                
+                            </div>
+                            <div class="step-text body3Tight">Lorem Ipsum Dolor Sit Amet</div>
+                        </div>
+                        <div class="step-single complete">
+                            <div class="step-number">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.1195 1.97522L4.47953 10.6152L0.519531 6.65522L1.53473 5.64002L4.47953 8.57762L12.1043 0.960022L13.1195 1.97522Z"/>
+                                </svg>                                
+                            </div>
+                            <div class="step-text body3Tight">Lorem Ipsum Dolor Sit Amet</div>
+                        </div>
+                        <div class="step-single active">
+                            <div class="step-number">
+                                <div class="step-number-container">3</div>
+                            </div>
+                            <div class="step-text body3Tight">Lorem Ipsum Dolor Sit Amet</div>
+                        </div>
+                        <div class="step-single">
+                            <div class="step-number">
+                                <div class="step-number-container">4</div>
+                            </div>
+                            <div class="step-text body3Tight">Lorem Ipsum</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="footer-left">
+                        <span class="button-tertiary">Cancel</span>
+                    </div>
+                    <div class="footer-right">
+                        <span class="button-tertiary">Previous</span>
+                        <span class="button-primary item-spacing">Next</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scrollspy" id="fullPageModal">
+            <div class="section-header">
+            <div class="header-top">
+                <h4 class="h4" id="regularButtons">Full Page Modal</h4>
+            </div>
+            <p class="section-description">Use a full page modal for complex wizards or modals that presnt a lot of functionality and require more user input.</p>
+            <!-- <h5 class="h5" id="regularButtons">Without Actions</h5> -->
+            </div>
+            <span class="button-primary waves-effect waves-light modal-trigger" href="#modal2">Open full page modal</span>
+            <div id="modal2" class="modal modal-fixed-footer full-page">
+                <div class="modal-header">
+                    <span class="h6Medium">H6 Modal name</span>
+                    <svg class="close-icon modal-close" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30 12.0275L22.0275 20L30 27.9725L27.9725 30L20 22.0275L12.0275 30L10 27.9725L17.9725 20L10 12.0275L12.0275 10L20 17.9725L27.9725 10L30 12.0275Z"/>
+                    </svg>
+                </div>
+                <div class="modal-content">
+                    <div class="stepper">
+                        <div class="step-single complete">
+                            <div class="step-number">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.1195 1.97522L4.47953 10.6152L0.519531 6.65522L1.53473 5.64002L4.47953 8.57762L12.1043 0.960022L13.1195 1.97522Z"/>
+                                </svg>                                
+                            </div>
+                            <div class="step-text body3Tight">Lorem Ipsum Dolor Sit Amet</div>
+                        </div>
+                        <div class="step-single complete">
+                            <div class="step-number">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.1195 1.97522L4.47953 10.6152L0.519531 6.65522L1.53473 5.64002L4.47953 8.57762L12.1043 0.960022L13.1195 1.97522Z"/>
+                                </svg>                                
+                            </div>
+                            <div class="step-text body3Tight">Lorem Ipsum Dolor Sit Amet</div>
+                        </div>
+                        <div class="step-single active">
+                            <div class="step-number">
+                                <div class="step-number-container">3</div>
+                            </div>
+                            <div class="step-text body3Tight">Lorem Ipsum Dolor Sit Amet</div>
+                        </div>
+                        <div class="step-single">
+                            <div class="step-number">
+                                <div class="step-number-container">4</div>
+                            </div>
+                            <div class="step-text body3Tight">Lorem Ipsum</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="footer-left">
+                        <span class="button-tertiary">Cancel</span>
+                    </div>
+                    <div class="footer-right">
+                        <span class="button-tertiary">Previous</span>
+                        <span class="button-primary item-spacing">Next</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scrollspy" id="mobileModal">
+        <div class="section-header">
+            <div class="header-top">
+              <h4 class="h4" id="regularButtons">Mobile Modal</h4>
+            </div>
+            <p class="section-description">All modals are made full screen on modals.</p>
+          </div>
+          <span class="button-primary waves-effect waves-light modal-trigger" href="#modal3">Open mobile modal</span>
+          <div id="modal3" class="modal modal-fixed-footer mobile-modal">
+              <div class="modal-header">
+                    <div class="mobile-header-left">
+                        <span class="h6Medium">H6 Modal name</span>
+                        <span class="labelTight">Step 2/6: Lorem Ipsum Dolor Sit Amet</span>
+                    </div>
+                  <svg class="close-icon modal-close" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M30 12.0275L22.0275 20L30 27.9725L27.9725 30L20 22.0275L12.0275 30L10 27.9725L17.9725 20L10 12.0275L12.0275 10L20 17.9725L27.9725 10L30 12.0275Z"/>
+                  </svg>
+              </div>
+              <div class="modal-content">
+                  
+              </div>
+              <div class="modal-footer">
+                  <div class="footer-left">
+                      <span class="button-tertiary">Cancel</span>
+                  </div>
+                  <div class="mobile-pagination">
+                      <div class="pagination-step"></div>
+                      <div class="pagination-step active"></div>
+                      <div class="pagination-step"></div>
+                      <div class="pagination-step"></div>
+                      <div class="pagination-step"></div>
+                      <div class="pagination-step"></div>
+                  </div>
+                  <div class="footer-right">
+                      <span class="button-primary item-spacing">Next</span>
+                  </div>
+              </div>
+          </div>
+        </div>  
+      </div>
+      <div class="tabs-hoz-container" id="useCases">
+      </div>
+    </div>
+  </div>
+  <div class="desktop-footer">
+    <div class="footer-left">
+      <div class="vitech-logo"></div>
+      <div class="copyright-info">Powered by &copy; Vitech Systems Sub LLC 2021. All rights reserved.</div>
+    </div>
+    <div class="footer-right">
+      <ul class="social-logos">
+        <li class="social-logo-single"><img src="images/fb.png"/></li>
+        <li class="social-logo-single"><img src="images/linkedin.png"/></li>
+        <li class="social-logo-single"><img src="images/twitter.png"/></li>
+      </ul>
+      <ul class="footer-links">
+        <li class="footer-link-single">Report a website problem</li>
+        <li class="footer-link-single">Privacy Policy</li>
+        <li class="footer-link-single">Help & Support</li>
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
+    });
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+    $('.scrollspy').scrollSpy();
+  });
+  </script>
+</body>
+</html>

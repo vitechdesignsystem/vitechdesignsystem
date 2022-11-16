@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Vitech DS - Buttons</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="css/materialdesignicons.css">
+  <link rel="stylesheet/less" type="text/css" href="css/style.less">
+
+  <script src="scripts/less.js"></script>
+  <script src="scripts/jquery.js"></script>
+  <script src="scripts/materialize.min.js"></script>
+  <script type="text/javascript" src="scripts/jquery.scrollTo.min.js"></script>
+  <script src="scripts/components.js"></script>
+  <script src="scripts/ui.js"></script>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <a href="index.html">
+        <div class="DSLogo"></div>
+        <div class="DSName">Design System</div>
+        <div class="DSVersion">v 1.01</div>
+      </a>
+    </div>
+    <div class="top-bar-right">
+      <ul class="top-bar-nav">
+        <li><a href="principles.html">Principles & Guidelines</a></li>
+        <li class="active"><a href="#">Components</a></li>
+        <li><a>IxD Patterns</a></li>
+        <li><a href="colors.html">Foundations</a></li>
+        <li><a>Content</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="left-sidebar">
+    <ul class="desktop-sidenav">
+      <li class="active"><a>Buttons</a></li>
+      <li><a href="inputfields.html">Input fields</a></li>
+      <li><a href="selection.html">Selection</a></li>
+      <!-- <li><a>Cards</a></li> -->
+      <li><a href="lists.html">Lists</a></li>
+      <li><a href="tables.html">Tables</a></li>
+      <li><a href="widgets.html">Widgets</a></li>
+      <li><a href="modals.html">Modals</a></li>
+      <!-- <li><a>Navigation</a></li> -->
+    </ul>
+  </div>
+  <!-- <div class="page-anchor-nav" id="designGuidelinesNav">
+    <p class="anchor-nav-header">Page Nav</p>
+    <ul class="anchor-nav">
+      <li class="active" data-scroll-target="#regularButtons">Regular</li>
+      <li data-scroll-target="#smallButtons">Small</li>
+      <li data-scroll-target="#largeButtons">Large</li>
+      <li data-scroll-target="#floatingButtons">Floating</li>
+      <li data-scroll-target="#iconButtons">With Icon
+        <ul class="anchor-nav-sublist">
+          <li>Left icon</li>
+          <li>Right icon</li>
+          <li>Stacked</li>
+        </ul>
+      </li>
+      <li data-scroll-target="#buttonGroup">Button Group</li>
+    </ul>
+  </div> -->
+  <!-- <div class="page-anchor-nav" id="usecasesNav" style="display: none;">
+    <p class="anchor-nav-header">Page Nav</p>
+    <ul class="anchor-nav">
+      <li class="active" data-scroll-target="#inWidgets">In Widgets</li>
+      <li data-scroll-target="#inModals">In Modals</li>
+      <li data-scroll-target="#inContent">Content</li>
+      <li data-scroll-target="#inOther">Other</li>
+    </ul>
+  </div> -->
+  <div class="page-anchor-nav" id="designGuidelinesNav">
+    <p class="anchor-nav-header">Page Nav</p>
+    <ul class="table-of-contents anchor-nav">
+      <li><a href="#regularButtons">Regular</a></li>
+      <li><a href="#smallButtons">Small</a></li>
+      <li><a href="#largeButtons">Large</a></li>
+      <li><a href="#floatingButtons">Floating</a></li>
+      <li><a href="#iconButtons">With Icon</a>
+        <ul class="anchor-nav-sublist">
+          <li>Left icon</li>
+          <li>Right icon</li>
+          <li>Stacked</li>
+        </ul>
+      </li>
+      <li><a href="#buttonGroup">Button Group</a></li>
+    </ul>
+  </div>
+  <div class="page-anchor-nav" id="usecasesNav" style="display: none;">
+    <p class="anchor-nav-header">Page Nav</p>
+    <ul class="table-of-contents anchor-nav">
+      <li><a href="#inWidgets">In Widgets</a></li>
+      <li><a href="#inModals">In Modals</a></li>
+      <li><a href="#inContent">Content</a></li>
+      <li><a href="#inOther">Other</a></li>
+    </ul>
+  </div>
+  <div class="content-wrapper">
+    <h3 class="h3">Buttons</h3>
+    <p class="page-description">Buttons are clickable or tappable items used to perform an action or initiate a process. Our buttons come in three major sizes (default, small and large) and three types (primary, secondary, and tertiary). When you design a page with multiple buttons, you need to prioritize the actions and choose the right type to highlight the main actions.<br><br>
+    Primary buttons have the highest degree of emphasis so they are used for the action most users should click or tap. There should be only one primary button on a page at a time. Other buttons should be displayed as secondary buttons or tertiary buttons. Not all screens require a primary button. Please refer to the Use Cases section of this page for our recommendation on how buttons are to be used.</p>
+    <div class="tabs-wrapper">
+      <div class="tabs-hoz" id="buttonsPageTabs">
+        <ul class="tabs-list">
+          <li class="active" data-tabs-target="#designGuidelines">Design Guidelines</li>
+          <li data-tabs-target="#useCases">Use Cases</li>
+          <!-- <li data-tabs-target="#code">Code</li> -->
+        </ul>
+      </div>
+      <div class="tabs-hoz-container active" id="designGuidelines">
+        <div class="scrollspy" id="regularButtons">
+          <div class="section-header">
+            <div class="header-top">
+              <h4 class="h4" id="regularButtons">Regular</h4>
+            </div>
+            <p class="section-description">Actions in widgets, tables, cards and overlay modals.</p>
+          </div>
+          <ul class="button-definition-container">
+            <li class="button-definition-single gray01BG top-small">
+              <div class="left-description body2Medium">Height<br>Width<br>Font</div>
+              <div class="right-definition body2Regular">
+                44px<br>Based on the length of the button name<br>Roboto, 16px medium
+                <div style="margin-top: 20px;">
+                  <span style="display: inline-block; width: 136px;" class="body3Regular">Default</span>
+                  <span style="display: inline-block; width: 136px;" class="body3Regular">Disabled</span>
+                </div>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">Primary</div>
+                  <div class="list-item-secondary">Contained style</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 136px;"><span class="button-primary item-spacing">Button</span></span>
+                <span style="display: inline-block; width: 136px;"><span class="button-primary disabled">Button</span></span>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">Secondary</div>
+                  <div class="list-item-secondary">Outline style</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 136px;"><span class="button-secondary item-spacing">Button</span></span>
+                <span style="display: inline-block; width: 136px;"><span class="button-secondary disabled">Button</span></span>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">Tertiary</div>
+                  <div class="list-item-secondary">Textual style</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 136px;"><span class="button-tertiary item-spacing">Button</span></span>
+                <span style="display: inline-block; width: 136px;"><span class="button-tertiary disabled">Button</span></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="scrollspy" id="smallButtons">
+          <div class="section-header">
+            <div class="header-top">
+              <h4 class="h4">Small</h4>
+            </div>
+            <p class="section-description">Actions in body content, filters and lists.</p>
+          </div>
+          <ul class="button-definition-container">
+            <li class="button-definition-single gray01BG top-small">
+              <div class="left-description body2Medium">Height<br>Width<br>Font</div>
+              <div class="right-definition body2Regular">
+                34px<br>Based on the length of the button name<br>Roboto, 14px medium
+                <div style="margin-top: 20px;">
+                  <span style="display: inline-block; width: 124px;" class="body3Regular">Default</span>
+                  <span style="display: inline-block; width: 124px;" class="body3Regular">Disabled</span>
+                </div>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">Primary</div>
+                  <div class="list-item-secondary">Contained style</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 124px;"><span class="button-primary size-small item-spacing">Button</span></span>
+                <span style="display: inline-block; width: 124px;"><span class="button-primary size-small disabled">Button</span></span>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">Secondary</div>
+                  <div class="list-item-secondary">Outline style</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 124px;"><span class="button-secondary size-small item-spacing">Button</span></span>
+                <span style="display: inline-block; width: 124px;"><span class="button-secondary size-small disabled">Button</span></span>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">Tertiary</div>
+                  <div class="list-item-secondary">Textual style</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 124px;"><span class="button-tertiary size-small item-spacing">Button</span></span>
+                <span style="display: inline-block; width: 124px;"><span class="button-tertiary size-small disabled">Button</span></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="scrollspy" id="largeButtons">
+          <div class="section-header">
+            <div class="header-top">
+              <h4 class="h4">Large</h4>
+            </div>
+            <p class="section-description">Actions in full page modals.</p>
+          </div>
+          <ul class="button-definition-container">
+            <li class="button-definition-single gray01BG top-small">
+              <div class="left-description body2Medium">Height<br>Width<br>Font</div>
+              <div class="right-definition body2Regular">
+                52px<br>Expand to fill the container width<br>Roboto, 16px medium
+                <div style="margin-top: 20px;">
+                  <span style="display: inline-block; width: 210px;" class="body3Regular">Default</span>
+                  <span style="display: inline-block; width: 210px;" class="body3Regular">Disabled</span>
+                </div>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">Primary</div>
+                  <div class="list-item-secondary">Contained style</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 210px;"><span class="button-primary size-large item-spacing">Button</span></span>
+                <span style="display: inline-block; width: 210px;"><span class="button-primary size-large disabled">Button</span></span>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">Secondary</div>
+                  <div class="list-item-secondary">Outline style</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 210px;"><span class="button-secondary size-large item-spacing">Button</span></span>
+                <span style="display: inline-block; width: 210px;"><span class="button-secondary size-large disabled">Button</span></span>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">Tertiary</div>
+                  <div class="list-item-secondary">Textual style</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 210px;"><span class="button-tertiary size-large item-spacing">Button</span></span>
+                <span style="display: inline-block; width: 210px;"><span class="button-tertiary size-large disabled">Button</span></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="scrollspy" id="floatingButtons">
+          <div class="section-header">
+            <div class="header-top">
+              <h4 class="h4">Floating</h4>
+            </div>
+            <p class="section-description">Round buttons that sit stationary above the page content. They’re commonly used for global accessible actions such as: edit, close, previous, help, send message, etc.</p>
+          </div>
+          <ul class="button-definition-container">
+            <li class="button-definition-single gray01BG top-small">
+              <div class="left-description body2Medium">Size</div>
+              <div class="right-definition body2Regular">56px Diameter
+                <div style="margin-top: 20px;">
+                  <span style="display: inline-block; width: 136px;" class="body3Regular">Default</span>
+                  <span style="display: inline-block; width: 136px;" class="body3Regular">Disabled</span>
+                </div>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">Elevated</div>
+                  <div class="list-item-secondary">Contained style with drop shadow</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 136px;">
+                  <span class="button-fab item-spacing"><span class="mdi mdi-32px mdi-pencil"></span></span>
+                </span>
+                <span style="display: inline-block; width: 136px;">
+                  <span class="button-fab disabled"><span class="mdi mdi-32px mdi-pencil"></span></span>
+                </span>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">Flat</div>
+                  <div class="list-item-secondary">Outline style with no drop shadow in default and disable states</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 136px;">
+                  <span class="button-fab flat item-spacing"><span class="mdi mdi-32px mdi-close"></span></span>
+                </span>
+                <span style="display: inline-block; width: 136px;">
+                  <span class="button-fab flat disabled item-spacing"><span class="mdi mdi-32px mdi-pencil"></span></span>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="scrollspy" id="iconButtons">
+          <div class="section-header">
+            <div class="header-top">
+              <h4 class="h4" id="">With Icon</h4>
+            </div>
+            <p class="section-description">Buttons with icons are recommended when you need more visual attention among content and other types of buttons. When you choose an icon, its visual representation must be relatable to the action. Avoid the use of icons for merely aesthetic purposes. Never use more than a single icon within a button.</p>
+          </div>
+          <ul class="button-definition-container">
+            <li class="button-definition-single gray01BG top-small">
+              <div class="left-description body2Medium">Height<br>Width<br>Icon Size</div>
+              <div class="right-definition body2Regular">34px<br>Based on the length of the button name<br>32px
+                <div style="margin-top: 20px;">
+                  <span style="display: inline-block; width: 156px;" class="body3Regular">Default</span>
+                  <span style="display: inline-block; width: 156px;" class="body3Regular">Disabled</span>
+                </div>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">Left Icon</div>
+                  <div class="list-item-secondary">Small textual style button with an icon on the left</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 150px;">
+                  <span class="button-icon item-spacing">
+                    <!-- <span class="mdi mdi-16px mdi-plus-circle icon-inline"></span> -->
+                    <span class="vds-icon">
+                      <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" class="primaryColor">
+                        <path d="M25 21H21V25H19V21H15V19H19V15H21V19H25V21ZM20 10C18.6868 10 17.3864 10.2587 16.1732 10.7612C14.9599 11.2638 13.8575 12.0003 12.9289 12.9289C11.0536 14.8043 10 17.3478 10 20C10 22.6522 11.0536 25.1957 12.9289 27.0711C13.8575 27.9997 14.9599 28.7362 16.1732 29.2388C17.3864 29.7413 18.6868 30 20 30C22.6522 30 25.1957 28.9464 27.0711 27.0711C28.9464 25.1957 30 22.6522 30 20C30 18.6868 29.7413 17.3864 29.2388 16.1732C28.7362 14.9599 27.9997 13.8575 27.0711 12.9289C26.1425 12.0003 25.0401 11.2638 23.8268 10.7612C22.6136 10.2587 21.3132 10 20 10Z"/>
+                      </svg>
+                    </span>
+                    <span class="button-text">Add New</span>
+                  </span>
+                </span>
+                <span style="display: inline-block; width: 150px;">
+                  <span class="button-icon disabled item-spacing">
+                    <!-- <span class="mdi mdi-16px mdi-plus-circle icon-inline"></span> -->
+                    <span class="vds-icon">
+                      <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" class="disabled">
+                        <path d="M25 21H21V25H19V21H15V19H19V15H21V19H25V21ZM20 10C18.6868 10 17.3864 10.2587 16.1732 10.7612C14.9599 11.2638 13.8575 12.0003 12.9289 12.9289C11.0536 14.8043 10 17.3478 10 20C10 22.6522 11.0536 25.1957 12.9289 27.0711C13.8575 27.9997 14.9599 28.7362 16.1732 29.2388C17.3864 29.7413 18.6868 30 20 30C22.6522 30 25.1957 28.9464 27.0711 27.0711C28.9464 25.1957 30 22.6522 30 20C30 18.6868 29.7413 17.3864 29.2388 16.1732C28.7362 14.9599 27.9997 13.8575 27.0711 12.9289C26.1425 12.0003 25.0401 11.2638 23.8268 10.7612C22.6136 10.2587 21.3132 10 20 10Z"/>
+                      </svg>
+                    </span>
+                    <span class="button-text">Add New</span>
+                  </span>
+                </span>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">Right Icon</div>
+                  <div class="list-item-secondary">Small textual style button with an icon on the right</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 150px;">
+                  <span class="button-icon right-icon item-spacing">
+                    <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                    <span class="vds-icon">
+                      <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" class="primaryColor">
+                        <path d="M15 26.12L21.12 20L15 13.88L16.8933 12L24.8933 20L16.8933 28L15 26.12Z"/>
+                      </svg>
+                    </span>
+                    <span class="button-text">Continue</span>
+                  </span>
+                </span>
+                <span style="display: inline-block; width: 150px;">
+                  <span class="button-icon right-icon disabled item-spacing">
+                    <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                    <span class="vds-icon">
+                      <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" class="disabled">
+                        <path d="M15 26.12L21.12 20L15 13.88L16.8933 12L24.8933 20L16.8933 28L15 26.12Z"/>
+                      </svg>
+                    </span>
+                    <span class="button-text">Continue</span>
+                  </span>
+                </span>
+              </div>
+            </li>
+            <li class="button-definition-single" style="padding-bottom: 0; border-bottom: 0;">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">Stacked</div>
+                  <div class="list-item-secondary">Buttons with a short name at the bottom and an icon on the top. They’re used in page headers and widget headers.</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 150px; text-align: center;">
+                  <span class="button-stacked item-spacing">
+                    <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                    <span class="icon-inline vds-icon">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"/>
+                      </svg>
+                    </span>
+                    <span class="button-text">More</span>
+                  </span>
+                </span>
+                <span style="display: inline-block; width: 150px; text-align: center;">
+                  <span class="button-stacked disabled item-spacing">
+                    <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                    <span class="icon-inline vds-icon">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"/>
+                      </svg>
+                    </span>
+                    <span class="button-text">More</span>
+                  </span>
+                </span>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-secondary">Buttons with a short name at the bottom and an icon on the top. They’re used in page headers and widget headers.</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 150px; text-align: center;">
+                  <span class="button-stacked item-spacing">
+                    <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                    <span class="icon-inline vds-icon">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.6 20V13.6H8V12H11.2V20H9.6ZM24 18.4C24 19.288 23.28 20 22.4 20H19.2V18.4H22.4V16.8H20.8V15.2H22.4V13.6H19.2V12H22.4C22.8243 12 23.2313 12.1686 23.5314 12.4686C23.8314 12.7687 24 13.1757 24 13.6V14.8C24 15.1183 23.8736 15.4235 23.6485 15.6485C23.4235 15.8736 23.1183 16 22.8 16C23.1183 16 23.4235 16.1264 23.6485 16.3515C23.8736 16.5765 24 16.8817 24 17.2V18.4ZM17.6 18.4V20H12.8V16.8C12.8 15.912 13.52 15.2 14.4 15.2H16V13.6H12.8V12H16C16.4243 12 16.8313 12.1686 17.1314 12.4686C17.4314 12.7687 17.6 13.1757 17.6 13.6V15.2C17.6 16.088 16.88 16.8 16 16.8H14.4V18.4H17.6Z"/>
+                      </svg>
+                    </span>
+                    <span class="button-text">More</span>
+                  </span>
+                </span>
+                <span style="display: inline-block; width: 150px; text-align: center;">
+                  <span class="button-stacked disabled item-spacing">
+                    <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                    <span class="icon-inline vds-icon">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.6 20V13.6H8V12H11.2V20H9.6ZM24 18.4C24 19.288 23.28 20 22.4 20H19.2V18.4H22.4V16.8H20.8V15.2H22.4V13.6H19.2V12H22.4C22.8243 12 23.2313 12.1686 23.5314 12.4686C23.8314 12.7687 24 13.1757 24 13.6V14.8C24 15.1183 23.8736 15.4235 23.6485 15.6485C23.4235 15.8736 23.1183 16 22.8 16C23.1183 16 23.4235 16.1264 23.6485 16.3515C23.8736 16.5765 24 16.8817 24 17.2V18.4ZM17.6 18.4V20H12.8V16.8C12.8 15.912 13.52 15.2 14.4 15.2H16V13.6H12.8V12H16C16.4243 12 16.8313 12.1686 17.1314 12.4686C17.4314 12.7687 17.6 13.1757 17.6 13.6V15.2C17.6 16.088 16.88 16.8 16 16.8H14.4V18.4H17.6Z"/>
+                      </svg>
+                    </span>
+                    <span class="button-text">More</span>
+                  </span>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="scrollspy" id="buttonGroup">
+          <div class="section-header">
+            <div class="header-top">
+              <h4 class="h4" id="">Button Group</h4>
+            </div>
+            <p class="section-description">Button groups are used to bunch together two or more buttons with similar actions. Users can easily switch from one button to another by a click or a tap. When a button in the group is selected, the selected state is visually highlighted.</p>
+          </div>
+          <ul class="button-definition-container">
+            <li class="button-definition-single gray01BG top-small">
+              <div class="left-description body2Medium">Height<br>Width per button<br>Font</div>
+              <div class="right-definition body2Regular">38px<br>120px<br>14px</div>
+            </li>
+            <li class="button-definition-single">
+              <ul class="button-group" id="">
+                <li class="button-group-single active">Button One</li>
+                <li class="button-group-single">Button Two</li>
+                <li class="button-group-single">Button Three</li>
+                <li class="button-group-single">Button Four</li>
+                <li class="button-group-single">Button Five</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="tabs-hoz-container" id="useCases">
+        <div class="scrollspy" id="inWidgets">
+          <div class="section-header">
+            <div class="header-top">
+              <h4 class="h4" id="">In Widgets</h4>
+            </div>
+            <p class="section-description">This section describes how buttons must be used within widgets.</p>
+          </div>
+          <div class="usecases one">
+            <div class="usecase-single">
+              <div class="usecase-inner">
+                <div class="usecase-screenshot just-screenshot">
+                  <img src="screenshots/buttons-usecases8.png">
+                </div>
+              </div>
+            </div>
+          </div>
+          <h5 class="h5">Actions on Widget Headers</h5>
+          <p class="inplace-text">Widgets can contain up to two actions as tertiary buttons which are located on the header area. These actions should impact the entire widget (like adding a new record etc.). It is recommended to prioritize the top two actions that the users are most likely to perform. The rest are located inside the "More" stacked button.</p>
+          <div class="usecases two">
+            <div class="usecase-single">
+              <div class="usecase-inner">
+                <div class="usecase-text recommended">
+                  <div class="usecase-title">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.7998 11.528L13.1998 21.128L8.7998 16.728L9.9278 15.6L13.1998 18.864L21.6718 10.4L22.7998 11.528Z"/>
+                    </svg>
+                    Recommended
+                  </div>
+                  <div class="usecase-description">
+                    <ul class="usecase-list">
+                      <li class="usecase-list-single">Use only upto max of 2 actions on the widget header.</li>
+                      <li class="usecase-list-single">Only use tertiary buttons for widget level actions.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="usecase-screenshot">
+                  <img src="screenshots/buttons-usecases1.png">
+                </div>
+              </div>
+            </div>
+            <div class="usecase-single">
+              <div class="usecase-inner">
+                <div class="usecase-text not-recommended">
+                  <div class="usecase-title">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16.8002 17.6H15.2002V14.4H16.8002V17.6ZM16.8002 20.8H15.2002V19.2H16.8002V20.8ZM7.2002 23.2H24.8002L16.0002 8L7.2002 23.2Z"/>
+                    </svg>
+                    Don't
+                  </div>
+                  <div class="usecase-description">
+                    <ul class="usecase-list">
+                      <li class="usecase-list-single">Don’t use primary or secondary buttons on the widget header.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="usecase-screenshot">
+                  <img src="screenshots/buttons-usecases6.png">
+                </div>
+              </div>
+            </div>
+          </div>
+          <h5 class="h5">Lists and Grids</h5>
+          <p class="inplace-text">Lists and grid can optionally contain buttons to provide quick actions. On lists, this is done as a separate row that houses the actions. On data grids/tables, the first column is reserved for actions. Note that on data tables, the overflow action is located first. <br><br>These actions only affect the individual record and do not control any other records in the widget, or cannot impact any other elements on the page. </p>
+          <div class="usecases two">
+            <div class="usecase-single">
+              <div class="usecase-inner">
+                <div class="usecase-text recommended">
+                  <div class="usecase-title">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.7998 11.528L13.1998 21.128L8.7998 16.728L9.9278 15.6L13.1998 18.864L21.6718 10.4L22.7998 11.528Z"/>
+                    </svg>
+                    Recommended
+                  </div>
+                  <div class="usecase-description">
+                    <ul class="usecase-list">
+                      <li class="usecase-list-single">Lists can have a max of 2 actions as tertiary buttons. The rest are tucked inside the overflow menu.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="usecase-screenshot">
+                  <img src="screenshots/buttons-usecases5.png">
+                </div>
+              </div>
+            </div>
+            <div class="usecase-single">
+              <div class="usecase-inner">
+                <div class="usecase-text recommended">
+                  <div class="usecase-title">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.7998 11.528L13.1998 21.128L8.7998 16.728L9.9278 15.6L13.1998 18.864L21.6718 10.4L22.7998 11.528Z"/>
+                    </svg>
+                    Recommended
+                  </div>
+                  <div class="usecase-description">
+                    <ul class="usecase-list">
+                      <li class="usecase-list-single">Use upto two tertiary buttons for grid actions. The rest must be tucked inside the overflow menu.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="usecase-screenshot">
+                  <img src="screenshots/buttons-usecases4.png">
+                </div>
+              </div>
+            </div>
+          </div>
+          <h5 class="h5">Filters and Groups</h5>
+          <p class="inplace-text">As with actions on lists and data tables, whenever there are more than two widget actions, they are located inside the "More" stacked button. Filters provide a convenient way to sort, search and filter the data present inside the widget. In some cases, they allow the user to toggle the visible columns in a data table.<br><br> Button groups are used to aggregate data into different groups. This allows the data to be presented an organized fashion, while letting users toggle between the groups.</p>
+          <div class="usecases two">
+            <div class="usecase-single">
+              <div class="usecase-inner">
+                <div class="usecase-text recommended">
+                  <div class="usecase-title">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.7998 11.528L13.1998 21.128L8.7998 16.728L9.9278 15.6L13.1998 18.864L21.6718 10.4L22.7998 11.528Z"/>
+                    </svg>
+                    Recommended
+                  </div>
+                  <div class="usecase-description">
+                    <ul class="usecase-list">
+                      <li class="usecase-list-single">Only a max of two stacked buttons can be present on the widget header (for “More” and “Filter” actions).</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="usecase-screenshot">
+                  <img src="screenshots/buttons-usecases3.png">
+                </div>
+              </div>
+            </div>
+            <div class="usecase-single">
+              <div class="usecase-inner">
+                <div class="usecase-text recommended">
+                  <div class="usecase-title">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.7998 11.528L13.1998 21.128L8.7998 16.728L9.9278 15.6L13.1998 18.864L21.6718 10.4L22.7998 11.528Z"/>
+                    </svg>
+                    Recommended
+                  </div>
+                  <div class="usecase-description">
+                    <ul class="usecase-list">
+                      <li class="usecase-list-single">Use button groups within widgets to toggle between sets of data.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="usecase-screenshot">
+                  <img src="screenshots/buttons-usecases2.png">
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="inplace-text">Although the Experience Designer allows changing of button styles, we strongly discourage using primary and secondary buttons on widget headers and within the widgets. Button types (both size and style) follow a certain hierarchy that is appropriate only at the recommended locations.<br><br> Using incorrect button styles would distract users from wayfinding and performing tasks.</p>
+          <div class="usecases one">
+            <div class="usecase-single">
+              <div class="usecase-inner">
+                <div class="usecase-text not-recommended">
+                  <div class="usecase-title">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.7998 11.528L13.1998 21.128L8.7998 16.728L9.9278 15.6L13.1998 18.864L21.6718 10.4L22.7998 11.528Z"/>
+                    </svg>
+                    Don't
+                  </div>
+                  <div class="usecase-description">
+                    <ul class="usecase-list">
+                      <li class="usecase-list-single">Don't combine different button types at inappropriate places. These compete for attention with each other and the hierarchy of the page is confusing.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="usecase-screenshot">
+                  <img src="screenshots/buttons-usecases7.png">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scrollspy" id="inModals">
+          <div class="section-header">
+            <div class="header-top">
+              <h4 class="h4" id="">In Modals</h4>
+            </div>
+            <p class="section-description">Buttons are used on modals to perform actions and for navigation. The bottom of the modal houses a fixed button bar that generally contains positive CTA button and a cancel. Ocassionally, there might also be a secondary action next to the positive CTA.</p>
+          </div>
+          <div class="usecases one">
+            <div class="usecase-single">
+              <div class="usecase-inner">
+                <div class="usecase-screenshot just-screenshot">
+                  <img src="screenshots/buttons-usecases9.png">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <h5 class="h5">Lists and Grids</h5> -->
+          <p class="inplace-text">On modals and wizards, there must be only one primary CTA button to improve wayfinding and inform the users about the next steps in the process. The primary CTA must be disabled and enabled according to the fields/conditions of the modal. This is a way to tacitly inform the user if there is any required field that hasn't been filled yet, or filled inapropriately. <br><br> The buttons on a wizard are limited to Cancel, Back and Next/Confirm (with the next/confirm being the CTA). When a user has to fill a form on the wizard step or make a requried selection, etc., the CTA is disabled. This allows the user to quickly understand when they can proceed to the next screen.</p>
+          <div class="usecases two">
+            <div class="usecase-single">
+              <div class="usecase-inner">
+                <div class="usecase-text recommended">
+                  <div class="usecase-title">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.7998 11.528L13.1998 21.128L8.7998 16.728L9.9278 15.6L13.1998 18.864L21.6718 10.4L22.7998 11.528Z"/>
+                    </svg>
+                    Recommended
+                  </div>
+                  <div class="usecase-description">
+                    <ul class="usecase-list">
+                      <li class="usecase-list-single">Enable and disable the button states appropriately, when there is insufficient or incorrect information.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="usecase-screenshot">
+                  <img src="screenshots/buttons-usecases10.png">
+                </div>
+              </div>
+            </div>
+            <div class="usecase-single">
+              <div class="usecase-inner">
+                <div class="usecase-text not-recommended">
+                  <div class="usecase-title">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.7998 11.528L13.1998 21.128L8.7998 16.728L9.9278 15.6L13.1998 18.864L21.6718 10.4L22.7998 11.528Z"/>
+                    </svg>
+                    Don't
+                  </div>
+                  <div class="usecase-description">
+                    <ul class="usecase-list">
+                      <li class="usecase-list-single">Don't use more than two actions on the modal's bottom right button bar area.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="usecase-screenshot">
+                  <img src="screenshots/buttons-usecases11.png">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="desktop-footer">
+    <div class="footer-left">
+      <div class="vitech-logo"></div>
+      <div class="copyright-info">Powered by &copy; Vitech Systems Sub LLC 2021. All rights reserved.</div>
+    </div>
+    <div class="footer-right">
+      <ul class="social-logos">
+        <li class="social-logo-single"><img src="images/fb.png"/></li>
+        <li class="social-logo-single"><img src="images/linkedin.png"/></li>
+        <li class="social-logo-single"><img src="images/twitter.png"/></li>
+      </ul>
+      <ul class="footer-links">
+        <li class="footer-link-single">Report a website problem</li>
+        <li class="footer-link-single">Privacy Policy</li>
+        <li class="footer-link-single">Help & Support</li>
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+    $('.scrollspy').scrollSpy();
+  });
+  </script>
+</body>
+</html>

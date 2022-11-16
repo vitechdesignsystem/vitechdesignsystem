@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Vitech DS - Input Fields</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="css/materialdesignicons.css">
+  <link rel="stylesheet/less" type="text/css" href="css/components.less">
+  <link rel="stylesheet/less" type="text/css" href="css/style.less">
+
+  <script src="scripts/less.js"></script>
+  <script src="scripts/jquery.js"></script>
+  <script src="scripts/materialize.min.js"></script>
+  <script type="text/javascript" src="scripts/jquery.scrollTo.min.js"></script>
+  <script src="scripts/components.js"></script>
+  <script src="scripts/ui.js"></script>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <a href="index.html">
+        <div class="DSLogo"></div>
+        <div class="DSName">Design System</div>
+        <div class="DSVersion">v 1.01</div>
+      </a>
+    </div>
+    <div class="top-bar-right">
+      <ul class="top-bar-nav">
+        <li><a href="principles.html">Principles & Guidelines</a></li>
+        <li class="active"><a href="#">Components</a></li>
+        <li><a>IxD Patterns</a></li>
+        <li><a href="colors.html">Foundations</a></li>
+        <li><a>Content</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="left-sidebar">
+    <ul class="desktop-sidenav">
+      <li><a href="buttons.html">Buttons</a></li>
+      <li class="active"><a>Input fields</a></li>
+      <li><a href="selection.html">Selection</a></li>
+      <!-- <li><a>Cards</a></li> -->
+      <li><a href="lists.html">Lists</a></li>
+      <li><a href="tables.html">Tables</a></li>
+      <li><a href="widgets.html">Widgets</a></li>
+      <li><a href="modals.html">Modals</a></li>
+      <!-- <li><a>Navigation</a></li> -->
+    </ul>
+  </div>
+  <!-- <div class="page-anchor-nav" id="designGuidelinesNav">
+    <p class="anchor-nav-header">Page Nav</p>
+    <ul class="anchor-nav">
+      <li class="active" data-scroll-target="#regularInputs">Regular</li>
+      <li data-scroll-target="#withIcon">With Icon</li>
+      <li data-scroll-target="#smallInputs">Small</li>
+      <li data-scroll-target="#floatingButtons">Textareas</li>
+      <li data-scroll-target="#iconButtons">Outlined</li>
+    </ul>
+  </div>
+  <div class="page-anchor-nav" id="usecasesNav" style="display: none;">
+    <p class="anchor-nav-header">Page Nav</p>
+    <ul class="anchor-nav">
+      <li class="active" data-scroll-target="#inWidgets">In Widgets</li>
+      <li data-scroll-target="#inModals">In Modals</li>
+      <li data-scroll-target="#inContent">Content</li>
+      <li data-scroll-target="#inOther">Other</li>
+    </ul>
+  </div> -->
+  <div class="page-anchor-nav" id="designGuidelinesNav">
+    <p class="anchor-nav-header">Page Nav</p>
+    <ul class="table-of-contents anchor-nav">
+      <li><a href="#regularInputs">Regular Text Inputs</a></li>
+      <li><a href="#withIcon">Text Inputs with Icon</a></li>
+      <li><a href="#selectInputs">Select Inputs</a></li>
+      <li><a href="#smallInputs">Small Text Inputs</a></li>
+      <li><a href="#textareas">Textareas</a></li>
+    </ul>
+  </div>
+  <div class="page-anchor-nav" id="usecasesNav" style="display: none;">
+    <p class="anchor-nav-header">Page Nav</p>
+    <ul class="table-of-contents anchor-nav">
+      <li><a href="#errorHandling">Error Handling</a></li>
+      <li><a href="#uniformFieldSizes">Uniform Field Sizes</a></li>
+      <li><a href="#groupedInputs">Grouped Inputs</a></li>
+    </ul>
+  </div>
+  <div class="content-wrapper">
+    <h3 class="h3">Input Fields</h3>
+    <p class="page-description">Input fields are used to capture user input on forms, modals and wizards among other places. This is done using text input fields and textareas that allow users to enter text into a field. We use a few appropriate variants at different places throughout our apps like input fields with help texts, search boxes, outlined text inputs, etc.</p>
+    <div class="tabs-wrapper">
+      <div class="tabs-hoz" id="buttonsPageTabs">
+        <ul class="tabs-list">
+          <li class="active" data-tabs-target="#designGuidelines">Design Guidelines</li>
+          <li data-tabs-target="#useCases">Use Cases</li>
+          <!-- <li data-tabs-target="#code">Code</li> -->
+        </ul>
+      </div>
+      <div class="tabs-hoz-container active" id="designGuidelines">
+        <div class="scrollspy" id="regularInputs">
+          <div class="section-header">
+            <div class="header-top">
+              <h4 class="h4">Regular Text Inputs</h4>
+            </div>
+            <p class="section-description">Obtain user inputs within forms and modals. Use a regular text input when the number of words to be input by the user is few, generally within one line. As these input boxes do not expand in width or height, using them for multi-line texts would not be ideal.</p>
+          </div>
+          <ul class="button-definition-container">
+            <li class="button-definition-single gray01BG top-small">
+              <div class="left-description body2Medium">Height<br>Width<br>Font</div>
+              <div class="right-definition body2Regular">
+                52px without helper text, 70px with helper text<br>100% of parent container<br>Roboto 16px regular for input, Roboto 12px for labels and help text.
+                <div style="margin-top: 20px;">
+                  <span style="display: inline-block; width: 180px;" class="body3Regular">Default</span>
+                  <span style="display: inline-block; width: 180px;" class="body3Regular">Disabled</span>
+                  <span style="display: inline-block; width: 180px;" class="body3Regular">Error</span>
+                </div>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">Regular</div>
+                  <div class="list-item-secondary">Without help text</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field">
+                    <input placeholder="Placeholder" id="first_name" type="text">
+                    <label for="first_name">Label</label>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field disabled">
+                    <input disabled placeholder="Placeholder" id="first_name" type="text">
+                    <label for="first_name">Label</label>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field invalid">
+                    <input placeholder="Placeholder" id="first_name" type="text" class="validate invalid">
+                    <label for="first_name">Label</label>
+                  </div>
+                </span>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">Regular</div>
+                  <div class="list-item-secondary">With help text</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field">
+                    <input placeholder="Placeholder" id="first_name" type="text">
+                    <label for="first_name">Label</label>
+                    <span class="helper-text" data-error="wrong" data-success="right">Some important text</span>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field disabled">
+                    <input placeholder="Placeholder" disabled id="first_name" type="text">
+                    <label for="first_name">Label</label>
+                    <span class="helper-text" data-error="wrong" data-success="right">Some important text</span>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field invalid">
+                    <input placeholder="Placeholder" id="first_name" type="text" class="validate invalid">
+                    <label for="first_name">Label</label>
+                    <span class="helper-text" data-error="Some important text" data-success="right">Some important text</span>
+                  </div>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="scrollspy" id="withIcon">
+          <div class="section-header">
+            <div class="header-top">
+              <h4 class="h4">Text Inputs with Icon</h4>
+            </div>
+            <p class="section-description">A leading icon to inform users about what they are expected to input. In this particular variant, an input box embellished with a dollar sign clarifies that the user does not need to type the dollar sign while entering the amount.</p>
+          </div>
+          <ul class="button-definition-container">
+            <li class="button-definition-single gray01BG top-small">
+              <div class="left-description body2Medium">Height<br>Width<br>Font</div>
+              <div class="right-definition body2Regular">
+                52px without helper text, 70px with helper text<br>100% of parent container<br>Roboto 16px regular for input, Roboto 12px for labels and help text.
+                <div style="margin-top: 20px;">
+                  <span style="display: inline-block; width: 180px;" class="body3Regular">Default</span>
+                  <span style="display: inline-block; width: 180px;" class="body3Regular">Disabled</span>
+                  <span style="display: inline-block; width: 180px;" class="body3Regular">Error</span>
+                </div>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">With Icon</div>
+                  <div class="list-item-secondary">Without help text</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field with-icon">
+                    <input placeholder="Placeholder" id="first_name" type="text">
+                    <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.2 16.6667H12.9778C12.9778 17.6267 14.1956 18.4444 15.6445 18.4444C17.0933 18.4444 18.3111 17.6267 18.3111 16.6667C18.3111 15.6889 17.3867 15.3333 15.4311 14.8622C13.5467 14.3911 11.2 13.8044 11.2 11.3333C11.2 9.74222 12.5067 8.39111 14.3111 7.93778V6H16.9778V7.93778C18.7822 8.39111 20.0889 9.74222 20.0889 11.3333H18.3111C18.3111 10.3733 17.0933 9.55556 15.6445 9.55556C14.1956 9.55556 12.9778 10.3733 12.9778 11.3333C12.9778 12.3111 13.9022 12.6667 15.8578 13.1378C17.7422 13.6089 20.0889 14.1956 20.0889 16.6667C20.0889 18.2578 18.7822 19.6089 16.9778 20.0622V22H14.3111V20.0622C12.5067 19.6089 11.2 18.2578 11.2 16.6667Z" fill="#444647"/>
+                    </svg>
+                    <label for="first_name">Label</label>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field with-icon disabled">
+                    <input disabled placeholder="Placeholder" id="first_name" type="text">
+                    <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.2 16.6667H12.9778C12.9778 17.6267 14.1956 18.4444 15.6445 18.4444C17.0933 18.4444 18.3111 17.6267 18.3111 16.6667C18.3111 15.6889 17.3867 15.3333 15.4311 14.8622C13.5467 14.3911 11.2 13.8044 11.2 11.3333C11.2 9.74222 12.5067 8.39111 14.3111 7.93778V6H16.9778V7.93778C18.7822 8.39111 20.0889 9.74222 20.0889 11.3333H18.3111C18.3111 10.3733 17.0933 9.55556 15.6445 9.55556C14.1956 9.55556 12.9778 10.3733 12.9778 11.3333C12.9778 12.3111 13.9022 12.6667 15.8578 13.1378C17.7422 13.6089 20.0889 14.1956 20.0889 16.6667C20.0889 18.2578 18.7822 19.6089 16.9778 20.0622V22H14.3111V20.0622C12.5067 19.6089 11.2 18.2578 11.2 16.6667Z" fill="#444647"/>
+                    </svg>
+                    <label for="first_name">Label</label>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field with-icon invalid">
+                    <input placeholder="Placeholder" id="first_name" type="text" class="validate invalid">
+                    <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.2 16.6667H12.9778C12.9778 17.6267 14.1956 18.4444 15.6445 18.4444C17.0933 18.4444 18.3111 17.6267 18.3111 16.6667C18.3111 15.6889 17.3867 15.3333 15.4311 14.8622C13.5467 14.3911 11.2 13.8044 11.2 11.3333C11.2 9.74222 12.5067 8.39111 14.3111 7.93778V6H16.9778V7.93778C18.7822 8.39111 20.0889 9.74222 20.0889 11.3333H18.3111C18.3111 10.3733 17.0933 9.55556 15.6445 9.55556C14.1956 9.55556 12.9778 10.3733 12.9778 11.3333C12.9778 12.3111 13.9022 12.6667 15.8578 13.1378C17.7422 13.6089 20.0889 14.1956 20.0889 16.6667C20.0889 18.2578 18.7822 19.6089 16.9778 20.0622V22H14.3111V20.0622C12.5067 19.6089 11.2 18.2578 11.2 16.6667Z" fill="#444647"/>
+                    </svg>
+                    <label for="first_name">Label</label>
+                  </div>
+                </span>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">With Icon</div>
+                  <div class="list-item-secondary">With help text</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field with-icon">
+                    <input placeholder="Placeholder" id="first_name" type="text">
+                    <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.2 16.6667H12.9778C12.9778 17.6267 14.1956 18.4444 15.6445 18.4444C17.0933 18.4444 18.3111 17.6267 18.3111 16.6667C18.3111 15.6889 17.3867 15.3333 15.4311 14.8622C13.5467 14.3911 11.2 13.8044 11.2 11.3333C11.2 9.74222 12.5067 8.39111 14.3111 7.93778V6H16.9778V7.93778C18.7822 8.39111 20.0889 9.74222 20.0889 11.3333H18.3111C18.3111 10.3733 17.0933 9.55556 15.6445 9.55556C14.1956 9.55556 12.9778 10.3733 12.9778 11.3333C12.9778 12.3111 13.9022 12.6667 15.8578 13.1378C17.7422 13.6089 20.0889 14.1956 20.0889 16.6667C20.0889 18.2578 18.7822 19.6089 16.9778 20.0622V22H14.3111V20.0622C12.5067 19.6089 11.2 18.2578 11.2 16.6667Z" fill="#444647"/>
+                    </svg>
+                    <label for="first_name">Label</label>
+                    <span class="helper-text" data-error="wrong" data-success="right">Some important text</span>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field with-icon disabled">
+                    <input placeholder="Placeholder" disabled id="first_name" type="text">
+                    <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.2 16.6667H12.9778C12.9778 17.6267 14.1956 18.4444 15.6445 18.4444C17.0933 18.4444 18.3111 17.6267 18.3111 16.6667C18.3111 15.6889 17.3867 15.3333 15.4311 14.8622C13.5467 14.3911 11.2 13.8044 11.2 11.3333C11.2 9.74222 12.5067 8.39111 14.3111 7.93778V6H16.9778V7.93778C18.7822 8.39111 20.0889 9.74222 20.0889 11.3333H18.3111C18.3111 10.3733 17.0933 9.55556 15.6445 9.55556C14.1956 9.55556 12.9778 10.3733 12.9778 11.3333C12.9778 12.3111 13.9022 12.6667 15.8578 13.1378C17.7422 13.6089 20.0889 14.1956 20.0889 16.6667C20.0889 18.2578 18.7822 19.6089 16.9778 20.0622V22H14.3111V20.0622C12.5067 19.6089 11.2 18.2578 11.2 16.6667Z" fill="#444647"/>
+                    </svg>
+                    <label for="first_name">Label</label>
+                    <span class="helper-text" data-error="wrong" data-success="right">Some important text</span>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field with-icon invalid">
+                    <input placeholder="Placeholder" id="first_name" type="text" class="validate invalid">
+                    <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.2 16.6667H12.9778C12.9778 17.6267 14.1956 18.4444 15.6445 18.4444C17.0933 18.4444 18.3111 17.6267 18.3111 16.6667C18.3111 15.6889 17.3867 15.3333 15.4311 14.8622C13.5467 14.3911 11.2 13.8044 11.2 11.3333C11.2 9.74222 12.5067 8.39111 14.3111 7.93778V6H16.9778V7.93778C18.7822 8.39111 20.0889 9.74222 20.0889 11.3333H18.3111C18.3111 10.3733 17.0933 9.55556 15.6445 9.55556C14.1956 9.55556 12.9778 10.3733 12.9778 11.3333C12.9778 12.3111 13.9022 12.6667 15.8578 13.1378C17.7422 13.6089 20.0889 14.1956 20.0889 16.6667C20.0889 18.2578 18.7822 19.6089 16.9778 20.0622V22H14.3111V20.0622C12.5067 19.6089 11.2 18.2578 11.2 16.6667Z" fill="#444647"/>
+                    </svg>
+                    <label for="first_name">Label</label>
+                    <span class="helper-text" data-error="Some important text" data-success="right">Some important text</span>
+                  </div>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="scrollspy" id="selectInputs">
+          <div class="section-header">
+            <div class="header-top">
+              <h4 class="h4" id="">Select Inputs</h4>
+            </div>
+            <p class="section-description">Use a Select Input when the user should is presented with multiple choices and must pick one. Alternatively, Radio Buttons are used in situations with a higher emphasis on decision making by exposing the choices and not hiding them inside a dropdown.</p>
+          </div>
+          <ul class="button-definition-container">
+            <li class="button-definition-single gray01BG top-small">
+              <div class="left-description body2Medium">Height<br>Width<br>Font</div>
+              <div class="right-definition body2Regular">
+                52px without helper text, 70px with helper text<br>100% of parent container<br>Roboto 16px regular for input, Roboto 12px for labels and help text.
+                <div style="margin-top: 20px;">
+                  <span style="display: inline-block; width: 180px;" class="body3Regular">Default</span>
+                  <span style="display: inline-block; width: 180px;" class="body3Regular">Disabled</span>
+                  <span style="display: inline-block; width: 180px;" class="body3Regular">Error</span>
+                </div>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">Regular</div>
+                  <div class="list-item-secondary">Without helpet text</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field">
+                    <select>
+                      <option value="">Choice 1</option>
+                      <option value="1">Choice 2</option>
+                      <option value="2">Choice 3</option>
+                      <option value="3">Choice 4</option>
+                    </select>
+                    <label>Label</label>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field disabled">
+                    <select disabled>
+                      <option value="">Choice 1</option>
+                      <option value="1">Choice 2</option>
+                      <option value="2">Choice 3</option>
+                      <option value="3">Choice 4</option>
+                    </select>
+                    <label>Label</label>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field invalid">
+                    <select>
+                      <option value="">Choice 1</option>
+                      <option value="1">Choice 2</option>
+                      <option value="2">Choice 3</option>
+                      <option value="3">Choice 4</option>
+                    </select>
+                    <label>Label</label>
+                  </div>
+                </span>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">Regular</div>
+                  <div class="list-item-secondary">With helper text</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field">
+                    <select>
+                      <option value="">Choice 1</option>
+                      <option value="1">Choice 2</option>
+                      <option value="2">Choice 3</option>
+                      <option value="3">Choice 4</option>
+                    </select>
+                    <label>Label</label>
+                    <span class="helper-text" data-error="wrong" data-success="right">Some important text</span>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field disabled">
+                    <select disabled>
+                      <option value="">Choice 1</option>
+                      <option value="1">Choice 2</option>
+                      <option value="2">Choice 3</option>
+                      <option value="3">Choice 4</option>
+                    </select>
+                    <label>Label</label>
+                    <span class="helper-text" data-error="wrong" data-success="right">Some important text</span>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field invalid">
+                    <select>
+                      <option value="">Choice 1</option>
+                      <option value="1">Choice 2</option>
+                      <option value="2">Choice 3</option>
+                      <option value="3">Choice 4</option>
+                    </select>
+                    <label>Label</label>
+                    <span class="helper-text" data-error="wrong" data-success="right">Some important text</span>
+                  </div>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="scrollspy" id="smallInputs">
+          <div class="section-header">
+            <div class="header-top">
+              <h4 class="h4" id="floatingButtons">Small Text Inputs</h4>
+            </div>
+            <p class="section-description">Small text inputs are used as in-situ inputs without labels. They are found on interfaces that generally don't change, with the users being familiar with the interfaces even outside of Vitech's apps. A search bar is an example of this, something that users can recognize by immediately looking at, even without a label for the input.</p>
+          </div>
+          <ul class="button-definition-container">
+            <li class="button-definition-single gray01BG top-small">
+              <div class="left-description body2Medium">Height<br>Width<br>Font</div>
+              <div class="right-definition body2Regular">
+                Varies with type<br>100% of parent container<br>Roboto 16px regular for input
+                <div style="margin-top: 20px;">
+                  <span style="display: inline-block; width: 180px;" class="body3Regular">Default</span>
+                  <span style="display: inline-block; width: 180px;" class="body3Regular">Disabled</span>
+                  <span style="display: inline-block; width: 180px;" class="body3Regular">Error</span>
+                </div>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">With Icon</div>
+                  <div class="list-item-secondary">No label, with icon on the left</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field with-icon withbg-no-label">
+                    <input placeholder="Placeholder" id="first_name" type="text">
+                    <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.53336 15.0519C8.53336 11.4518 11.4518 8.53336 15.0519 8.53336C18.652 8.53336 21.5704 11.4518 21.5704 15.0519C21.5704 16.8056 20.8779 18.3975 19.7514 19.5691C19.718 19.5954 19.6858 19.6239 19.6551 19.6547C19.6243 19.6855 19.5958 19.7177 19.5695 19.7511C18.3978 20.8778 16.8057 21.5704 15.0519 21.5704C11.4518 21.5704 8.53336 18.652 8.53336 15.0519ZM20.3693 21.8774C18.9023 23.0219 17.0567 23.7038 15.0519 23.7038C10.2736 23.7038 6.40002 19.8302 6.40002 15.0519C6.40002 10.2736 10.2736 6.40002 15.0519 6.40002C19.8302 6.40002 23.7038 10.2736 23.7038 15.0519C23.7038 17.0565 23.022 18.9019 21.8777 20.3688L25.288 23.7791C25.7046 24.1957 25.7046 24.871 25.288 25.2876C24.8715 25.7042 24.1961 25.7042 23.7795 25.2876L20.3693 21.8774Z"/>
+                    </svg>                    
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field with-icon withbg-no-label disabled">
+                    <input placeholder="Placeholder" disabled id="first_name" type="text">
+                    <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.53336 15.0519C8.53336 11.4518 11.4518 8.53336 15.0519 8.53336C18.652 8.53336 21.5704 11.4518 21.5704 15.0519C21.5704 16.8056 20.8779 18.3975 19.7514 19.5691C19.718 19.5954 19.6858 19.6239 19.6551 19.6547C19.6243 19.6855 19.5958 19.7177 19.5695 19.7511C18.3978 20.8778 16.8057 21.5704 15.0519 21.5704C11.4518 21.5704 8.53336 18.652 8.53336 15.0519ZM20.3693 21.8774C18.9023 23.0219 17.0567 23.7038 15.0519 23.7038C10.2736 23.7038 6.40002 19.8302 6.40002 15.0519C6.40002 10.2736 10.2736 6.40002 15.0519 6.40002C19.8302 6.40002 23.7038 10.2736 23.7038 15.0519C23.7038 17.0565 23.022 18.9019 21.8777 20.3688L25.288 23.7791C25.7046 24.1957 25.7046 24.871 25.288 25.2876C24.8715 25.7042 24.1961 25.7042 23.7795 25.2876L20.3693 21.8774Z"/>
+                    </svg>                    
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field with-icon withbg-no-label invalid">
+                    <input placeholder="Placeholder" disabled id="first_name" type="text">
+                    <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.53336 15.0519C8.53336 11.4518 11.4518 8.53336 15.0519 8.53336C18.652 8.53336 21.5704 11.4518 21.5704 15.0519C21.5704 16.8056 20.8779 18.3975 19.7514 19.5691C19.718 19.5954 19.6858 19.6239 19.6551 19.6547C19.6243 19.6855 19.5958 19.7177 19.5695 19.7511C18.3978 20.8778 16.8057 21.5704 15.0519 21.5704C11.4518 21.5704 8.53336 18.652 8.53336 15.0519ZM20.3693 21.8774C18.9023 23.0219 17.0567 23.7038 15.0519 23.7038C10.2736 23.7038 6.40002 19.8302 6.40002 15.0519C6.40002 10.2736 10.2736 6.40002 15.0519 6.40002C19.8302 6.40002 23.7038 10.2736 23.7038 15.0519C23.7038 17.0565 23.022 18.9019 21.8777 20.3688L25.288 23.7791C25.7046 24.1957 25.7046 24.871 25.288 25.2876C24.8715 25.7042 24.1961 25.7042 23.7795 25.2876L20.3693 21.8774Z"/>
+                    </svg>                    
+                  </div>
+                </span>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">In Filters</div>
+                  <div class="list-item-secondary">With icon on the right</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field with-icon withbg-no-label in-filter">
+                    <input placeholder="Placeholder" id="first_name" type="text">
+                    <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4668 15.0518C23.4668 11.4517 20.5483 8.53324 16.9482 8.53324C13.3481 8.53324 10.4297 11.4517 10.4297 15.0518C10.4297 16.8054 11.1222 18.3974 12.2487 19.569C12.2821 19.5953 12.3143 19.6238 12.3451 19.6545C12.3758 19.6853 12.4044 19.7175 12.4306 19.751C13.6023 20.8776 15.1944 21.5703 16.9482 21.5703C20.5483 21.5703 23.4668 18.6519 23.4668 15.0518ZM11.6308 21.8772C13.0979 23.0217 14.9434 23.7036 16.9482 23.7036C21.7265 23.7036 25.6001 19.8301 25.6001 15.0518C25.6001 10.2735 21.7265 6.3999 16.9482 6.3999C12.1699 6.3999 8.29636 10.2735 8.29636 15.0518C8.29636 17.0564 8.97812 18.9018 10.1224 20.3687L6.7121 23.779C6.29554 24.1956 6.29554 24.8709 6.7121 25.2875C7.12866 25.704 7.80404 25.704 8.2206 25.2875L11.6308 21.8772Z"/>
+                    </svg>                    
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field with-icon withbg-no-label in-filter disabled">
+                    <input placeholder="Placeholder" disabled id="first_name" type="text">
+                    <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4668 15.0518C23.4668 11.4517 20.5483 8.53324 16.9482 8.53324C13.3481 8.53324 10.4297 11.4517 10.4297 15.0518C10.4297 16.8054 11.1222 18.3974 12.2487 19.569C12.2821 19.5953 12.3143 19.6238 12.3451 19.6545C12.3758 19.6853 12.4044 19.7175 12.4306 19.751C13.6023 20.8776 15.1944 21.5703 16.9482 21.5703C20.5483 21.5703 23.4668 18.6519 23.4668 15.0518ZM11.6308 21.8772C13.0979 23.0217 14.9434 23.7036 16.9482 23.7036C21.7265 23.7036 25.6001 19.8301 25.6001 15.0518C25.6001 10.2735 21.7265 6.3999 16.9482 6.3999C12.1699 6.3999 8.29636 10.2735 8.29636 15.0518C8.29636 17.0564 8.97812 18.9018 10.1224 20.3687L6.7121 23.779C6.29554 24.1956 6.29554 24.8709 6.7121 25.2875C7.12866 25.704 7.80404 25.704 8.2206 25.2875L11.6308 21.8772Z"/>
+                    </svg>                    
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field with-icon withbg-no-label in-filter invalid">
+                    <input placeholder="Placeholder" id="first_name" type="text">
+                    <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4668 15.0518C23.4668 11.4517 20.5483 8.53324 16.9482 8.53324C13.3481 8.53324 10.4297 11.4517 10.4297 15.0518C10.4297 16.8054 11.1222 18.3974 12.2487 19.569C12.2821 19.5953 12.3143 19.6238 12.3451 19.6545C12.3758 19.6853 12.4044 19.7175 12.4306 19.751C13.6023 20.8776 15.1944 21.5703 16.9482 21.5703C20.5483 21.5703 23.4668 18.6519 23.4668 15.0518ZM11.6308 21.8772C13.0979 23.0217 14.9434 23.7036 16.9482 23.7036C21.7265 23.7036 25.6001 19.8301 25.6001 15.0518C25.6001 10.2735 21.7265 6.3999 16.9482 6.3999C12.1699 6.3999 8.29636 10.2735 8.29636 15.0518C8.29636 17.0564 8.97812 18.9018 10.1224 20.3687L6.7121 23.779C6.29554 24.1956 6.29554 24.8709 6.7121 25.2875C7.12866 25.704 7.80404 25.704 8.2206 25.2875L11.6308 21.8772Z"/>
+                    </svg>                    
+                  </div>
+                </span>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">Regular</div>
+                  <div class="list-item-secondary">No label</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field no-label">
+                    <input placeholder="Placeholder" id="first_name" type="text">  
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field no-label disabled">
+                    <input placeholder="Placeholder" disabled id="first_name" type="text">
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field no-label invalid">
+                    <input placeholder="Placeholder" id="first_name" type="text">
+                  </div>
+                </span>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">Regular</div>
+                  <div class="list-item-secondary">No label</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field no-label with-icon">
+                    <input placeholder="Placeholder" id="first_name" type="text">
+                    <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4668 15.0518C23.4668 11.4517 20.5483 8.53324 16.9482 8.53324C13.3481 8.53324 10.4297 11.4517 10.4297 15.0518C10.4297 16.8054 11.1222 18.3974 12.2487 19.569C12.2821 19.5953 12.3143 19.6238 12.3451 19.6545C12.3758 19.6853 12.4044 19.7175 12.4306 19.751C13.6023 20.8776 15.1944 21.5703 16.9482 21.5703C20.5483 21.5703 23.4668 18.6519 23.4668 15.0518ZM11.6308 21.8772C13.0979 23.0217 14.9434 23.7036 16.9482 23.7036C21.7265 23.7036 25.6001 19.8301 25.6001 15.0518C25.6001 10.2735 21.7265 6.3999 16.9482 6.3999C12.1699 6.3999 8.29636 10.2735 8.29636 15.0518C8.29636 17.0564 8.97812 18.9018 10.1224 20.3687L6.7121 23.779C6.29554 24.1956 6.29554 24.8709 6.7121 25.2875C7.12866 25.704 7.80404 25.704 8.2206 25.2875L11.6308 21.8772Z"/>
+                    </svg>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field no-label with-icon disabled">
+                    <input placeholder="Placeholder" disabled id="first_name" type="text">
+                    <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4668 15.0518C23.4668 11.4517 20.5483 8.53324 16.9482 8.53324C13.3481 8.53324 10.4297 11.4517 10.4297 15.0518C10.4297 16.8054 11.1222 18.3974 12.2487 19.569C12.2821 19.5953 12.3143 19.6238 12.3451 19.6545C12.3758 19.6853 12.4044 19.7175 12.4306 19.751C13.6023 20.8776 15.1944 21.5703 16.9482 21.5703C20.5483 21.5703 23.4668 18.6519 23.4668 15.0518ZM11.6308 21.8772C13.0979 23.0217 14.9434 23.7036 16.9482 23.7036C21.7265 23.7036 25.6001 19.8301 25.6001 15.0518C25.6001 10.2735 21.7265 6.3999 16.9482 6.3999C12.1699 6.3999 8.29636 10.2735 8.29636 15.0518C8.29636 17.0564 8.97812 18.9018 10.1224 20.3687L6.7121 23.779C6.29554 24.1956 6.29554 24.8709 6.7121 25.2875C7.12866 25.704 7.80404 25.704 8.2206 25.2875L11.6308 21.8772Z"/>
+                    </svg>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field no-label with-icon invalid">
+                    <input placeholder="Placeholder" id="first_name" type="text">
+                    <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4668 15.0518C23.4668 11.4517 20.5483 8.53324 16.9482 8.53324C13.3481 8.53324 10.4297 11.4517 10.4297 15.0518C10.4297 16.8054 11.1222 18.3974 12.2487 19.569C12.2821 19.5953 12.3143 19.6238 12.3451 19.6545C12.3758 19.6853 12.4044 19.7175 12.4306 19.751C13.6023 20.8776 15.1944 21.5703 16.9482 21.5703C20.5483 21.5703 23.4668 18.6519 23.4668 15.0518ZM11.6308 21.8772C13.0979 23.0217 14.9434 23.7036 16.9482 23.7036C21.7265 23.7036 25.6001 19.8301 25.6001 15.0518C25.6001 10.2735 21.7265 6.3999 16.9482 6.3999C12.1699 6.3999 8.29636 10.2735 8.29636 15.0518C8.29636 17.0564 8.97812 18.9018 10.1224 20.3687L6.7121 23.779C6.29554 24.1956 6.29554 24.8709 6.7121 25.2875C7.12866 25.704 7.80404 25.704 8.2206 25.2875L11.6308 21.8772Z"/>
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">Regular</div>
+                  <div class="list-item-secondary">No label</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field no-label with-icon with-dd">
+                    <input placeholder="Placeholder" id="first_name" type="text">
+                    <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4668 15.0518C23.4668 11.4517 20.5483 8.53324 16.9482 8.53324C13.3481 8.53324 10.4297 11.4517 10.4297 15.0518C10.4297 16.8054 11.1222 18.3974 12.2487 19.569C12.2821 19.5953 12.3143 19.6238 12.3451 19.6545C12.3758 19.6853 12.4044 19.7175 12.4306 19.751C13.6023 20.8776 15.1944 21.5703 16.9482 21.5703C20.5483 21.5703 23.4668 18.6519 23.4668 15.0518ZM11.6308 21.8772C13.0979 23.0217 14.9434 23.7036 16.9482 23.7036C21.7265 23.7036 25.6001 19.8301 25.6001 15.0518C25.6001 10.2735 21.7265 6.3999 16.9482 6.3999C12.1699 6.3999 8.29636 10.2735 8.29636 15.0518C8.29636 17.0564 8.97812 18.9018 10.1224 20.3687L6.7121 23.779C6.29554 24.1956 6.29554 24.8709 6.7121 25.2875C7.12866 25.704 7.80404 25.704 8.2206 25.2875L11.6308 21.8772Z"/>
+                    </svg>
+                    <svg class="dd-arrow" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 17.5L7.70001 11.2H20.3L14 17.5Z" fill="#444647"/>
+                    </svg>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field no-label with-icon with-dd disabled">
+                    <input placeholder="Placeholder" disabled id="first_name" type="text">
+                    <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4668 15.0518C23.4668 11.4517 20.5483 8.53324 16.9482 8.53324C13.3481 8.53324 10.4297 11.4517 10.4297 15.0518C10.4297 16.8054 11.1222 18.3974 12.2487 19.569C12.2821 19.5953 12.3143 19.6238 12.3451 19.6545C12.3758 19.6853 12.4044 19.7175 12.4306 19.751C13.6023 20.8776 15.1944 21.5703 16.9482 21.5703C20.5483 21.5703 23.4668 18.6519 23.4668 15.0518ZM11.6308 21.8772C13.0979 23.0217 14.9434 23.7036 16.9482 23.7036C21.7265 23.7036 25.6001 19.8301 25.6001 15.0518C25.6001 10.2735 21.7265 6.3999 16.9482 6.3999C12.1699 6.3999 8.29636 10.2735 8.29636 15.0518C8.29636 17.0564 8.97812 18.9018 10.1224 20.3687L6.7121 23.779C6.29554 24.1956 6.29554 24.8709 6.7121 25.2875C7.12866 25.704 7.80404 25.704 8.2206 25.2875L11.6308 21.8772Z"/>
+                    </svg>
+                    <svg class="dd-arrow" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 17.5L7.70001 11.2H20.3L14 17.5Z" fill="#444647"/>
+                    </svg>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field no-label with-icon with-dd invalid">
+                    <input placeholder="Placeholder" id="first_name" type="text">
+                    <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4668 15.0518C23.4668 11.4517 20.5483 8.53324 16.9482 8.53324C13.3481 8.53324 10.4297 11.4517 10.4297 15.0518C10.4297 16.8054 11.1222 18.3974 12.2487 19.569C12.2821 19.5953 12.3143 19.6238 12.3451 19.6545C12.3758 19.6853 12.4044 19.7175 12.4306 19.751C13.6023 20.8776 15.1944 21.5703 16.9482 21.5703C20.5483 21.5703 23.4668 18.6519 23.4668 15.0518ZM11.6308 21.8772C13.0979 23.0217 14.9434 23.7036 16.9482 23.7036C21.7265 23.7036 25.6001 19.8301 25.6001 15.0518C25.6001 10.2735 21.7265 6.3999 16.9482 6.3999C12.1699 6.3999 8.29636 10.2735 8.29636 15.0518C8.29636 17.0564 8.97812 18.9018 10.1224 20.3687L6.7121 23.779C6.29554 24.1956 6.29554 24.8709 6.7121 25.2875C7.12866 25.704 7.80404 25.704 8.2206 25.2875L11.6308 21.8772Z"/>
+                    </svg>
+                    <svg class="dd-arrow" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 17.5L7.70001 11.2H20.3L14 17.5Z" fill="#444647"/>
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="scrollspy" id="textareas">
+          <div class="section-header">
+            <div class="header-top">
+              <h4 class="h4" id="floatingButtons">Textareas</h4>
+            </div>
+            <p class="section-description">Textareas are long-form inputs where users are generally expected to input multi-line texts. These input boxes grow to a few lines (as configured) and might even show a scroll bar for a user to read all the typed content. A control is provided on the bottom-right side of the input box for the user to manually adjust the size of the textarea.</p>
+          </div>
+          <ul class="button-definition-container">
+            <li class="button-definition-single gray01BG top-small">
+              <div class="left-description body2Medium">Height<br>Width<br>Font</div>
+              <div class="right-definition body2Regular">
+                Varies according to content, or manually resized<br>100% of parent container by default, or manually resized<br>Roboto 16px regular for input
+                <div style="margin-top: 20px;">
+                  <span style="display: inline-block; width: 180px;" class="body3Regular">Default</span>
+                  <span style="display: inline-block; width: 180px;" class="body3Regular">Disabled</span>
+                  <span style="display: inline-block; width: 180px;" class="body3Regular">Error</span>
+                </div>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">With Icon</div>
+                  <div class="list-item-secondary">No label, with icon on the left</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field textarea">
+                    <textarea id="textarea2" class="materialize-textarea" placeholder="Enter text"></textarea>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field textarea disabled">
+                    <textarea id="textarea2" disabled class="materialize-textarea disabled" placeholder="Enter text"></textarea>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field textarea invalid">
+                    <textarea id="textarea2" class="materialize-textarea invalid" placeholder="Enter text"></textarea>
+                  </div>
+                </span>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">With Icon</div>
+                  <div class="list-item-secondary">No label, with icon on the left</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field textarea with-label">
+                    <textarea id="textarea2" class="materialize-textarea" placeholder="Enter text"></textarea>
+                    <label for="textarea2">Textarea</label>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field textarea with-label disabled">
+                    <textarea id="textarea2" disabled class="materialize-textarea disabled" placeholder="Enter text"></textarea>
+                    <label for="textarea2">Textarea</label>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field textarea with-label invalid">
+                    <textarea id="textarea2" class="materialize-textarea invalid" placeholder="Enter text"></textarea>
+                    <label for="textarea2">Textarea</label>
+                  </div>
+                </span>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">With Icon</div>
+                  <div class="list-item-secondary">No label, with icon on the left</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field textarea outlined">
+                    <textarea id="textarea2" class="materialize-textarea" placeholder="Enter text"></textarea>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field textarea outlined disabled">
+                    <textarea id="textarea2" disabled class="materialize-textarea disabled" placeholder="Enter text"></textarea>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field textarea outlined invalid">
+                    <textarea id="textarea2" class="materialize-textarea invalid" placeholder="Enter text"></textarea>
+                  </div>
+                </span>
+              </div>
+            </li>
+            <li class="button-definition-single">
+              <div class="left-description">
+                <div class="list2Line1612">
+                  <div class="list-item-primary">With Icon</div>
+                  <div class="list-item-secondary">No label, with icon on the left</div>
+                </div>
+              </div>
+              <div class="right-definition">
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field textarea outlined with-label">
+                    <textarea id="textarea2" class="materialize-textarea" placeholder="Enter text"></textarea>
+                    <label for="textarea2">Textarea</label>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field textarea outlined with-label disabled">
+                    <textarea id="textarea2" disabled class="materialize-textarea disabled" placeholder="Enter text"></textarea>
+                    <label for="textarea2">Textarea</label>
+                  </div>
+                </span>
+                <span style="display: inline-block; width: 180px; padding-right: 40px;">
+                  <div class="input-field textarea outlined with-label invalid">
+                    <textarea id="textarea2" class="materialize-textarea invalid" placeholder="Enter text"></textarea>
+                    <label for="textarea2">Textarea</label>
+                  </div>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="tabs-hoz-container" id="useCases">
+        <div class="scrollspy" id="errorHandling">
+          <div class="section-header">
+            <div class="header-top">
+              <h4 class="h4" id="">Error Handling</h4>
+            </div>
+            <p class="section-description">The error handling mechanism built into the input fields can be a great way to inform the user about specific, field-level errors. Presenting errors in this format allows the user to find the input fields with missing or incorrect inputs quicker.</p>
+          </div>
+          <div class="usecases two">
+            <div class="usecase-single">
+              <div class="usecase-inner">
+                <div class="usecase-text recommended">
+                  <div class="usecase-title">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.7998 11.528L13.1998 21.128L8.7998 16.728L9.9278 15.6L13.1998 18.864L21.6718 10.4L22.7998 11.528Z"/>
+                    </svg>
+                    Recommended
+                  </div>
+                  <div class="usecase-description">
+                    <ul class="usecase-list">
+                      <li class="usecase-list-single">Use concise text to pinpoint the error(s).</li>
+                      <li class="usecase-list-single">Validate as the user fills the form, or on submit.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="usecase-screenshot">
+                  <img src="screenshots/inputs-usecases1.png">
+                </div>
+              </div>
+            </div>
+            <div class="usecase-single">
+              <div class="usecase-inner">
+                <div class="usecase-text caution">
+                  <div class="usecase-title">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16.8002 17.6H15.2002V14.4H16.8002V17.6ZM16.8002 20.8H15.2002V19.2H16.8002V20.8ZM7.2002 23.2H24.8002L16.0002 8L7.2002 23.2Z"/>
+                    </svg>
+                    Caution
+                  </div>
+                  <div class="usecase-description">
+                    <ul class="usecase-list">
+                      <li class="usecase-list-single">Small text makes multi-line messages harder to read.</li>
+                      <li class="usecase-list-single">May not be appropriate for smaller devices.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="usecase-screenshot">
+                  <img src="screenshots/inputs-usecases2.png">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scrollspy" id="uniformFieldSizes">
+          <div class="section-header">
+            <div class="header-top">
+              <h4 class="h4" id="">Uniform Field Sizes</h4>
+            </div>
+            <p class="section-description">Field sizes must be uniform and be aligned appropriately unless they follow a multi-column layout. It ensures a clean, consistent, and professional-looking interface.</p>
+          </div>
+          <div class="usecases one">
+            <div class="usecase-single">
+              <div class="usecase-inner">
+                <div class="usecase-text recommended">
+                  <div class="usecase-title">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.7998 11.528L13.1998 21.128L8.7998 16.728L9.9278 15.6L13.1998 18.864L21.6718 10.4L22.7998 11.528Z"/>
+                    </svg>
+                    Recommended
+                  </div>
+                  <div class="usecase-description">
+                    <ul class="usecase-list">
+                      <li class="usecase-list-single">Although the modal here is full-width, keeping the field lengths shorter ensures better readability and lesser lines going across the screen.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="usecase-screenshot">
+                  <img src="screenshots/inputs-usecases3.png">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <h5 class="h5">Lists and Grids</h5> -->
+        </div>
+        <div class="scrollspy" id="groupedInputs">
+          <div class="section-header">
+            <div class="header-top">
+              <h4 class="h4" id="">Grouped Inputs</h4>
+            </div>
+            <p class="section-description">Related input fields can be grouped together on the same line with a multi-column layout. Note that these should be relatively simple fields (like a date field with day, month, year, etc.). Grouping allows users to perceive individual fields as being a part of a whole.</p>
+          </div>
+          <div class="usecases one">
+            <div class="usecase-single">
+              <div class="usecase-inner">
+                <div class="usecase-text recommended">
+                  <div class="usecase-title">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.7998 11.528L13.1998 21.128L8.7998 16.728L9.9278 15.6L13.1998 18.864L21.6718 10.4L22.7998 11.528Z"/>
+                    </svg>
+                    Recommended
+                  </div>
+                  <div class="usecase-description">
+                    <ul class="usecase-list">
+                      <li class="usecase-list-single">As the marital date field is related to the user being married, they are grouped on the same line.</li>
+                      <li class="usecase-list-single">This field can also be hidden when not needed (in the case when the user is not married).</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="usecase-screenshot">
+                  <img src="screenshots/inputs-usecases4.png">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="desktop-footer">
+    <div class="footer-left">
+      <div class="vitech-logo"></div>
+      <div class="copyright-info">Powered by &copy; Vitech Systems Sub LLC 2021. All rights reserved.</div>
+    </div>
+    <div class="footer-right">
+      <ul class="social-logos">
+        <li class="social-logo-single"><img src="images/fb.png"/></li>
+        <li class="social-logo-single"><img src="images/linkedin.png"/></li>
+        <li class="social-logo-single"><img src="images/twitter.png"/></li>
+      </ul>
+      <ul class="footer-links">
+        <li class="footer-link-single">Report a website problem</li>
+        <li class="footer-link-single">Privacy Policy</li>
+        <li class="footer-link-single">Help & Support</li>
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+    $('.scrollspy').scrollSpy();
+  });
+  </script>
+</body>
+</html>

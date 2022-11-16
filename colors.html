@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Vitech DS - Colors</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet/less" type="text/css" href="css/style.less">
+
+  <script src="scripts/less.js"></script>
+  <script src="scripts/jquery.js"></script>
+  <script type="text/javascript" src="scripts/jquery.scrollTo.min.js"></script>
+  <script src="scripts/components.js"></script>
+  <script src="scripts/ui.js"></script>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <a href="index.html">
+        <div class="DSLogo"></div>
+        <div class="DSName">Design System</div>
+        <div class="DSVersion">v 1.01</div>
+      </a>
+    </div>
+    <div class="top-bar-right">
+      <ul class="top-bar-nav">
+        <li><a href="principles.html">Principles & Guidelines</a></li>
+        <li><a href="buttons.html">Components</a></li>
+        <li><a>IxD Patterns</a></li>
+        <li class="active"><a href="colors.html">Foundations</a></li>
+        <li><a>Content</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="left-sidebar">
+    <ul class="desktop-sidenav">
+      <li class="active"><a>Colors</a></li>
+      <li><a>Typography</a></li>
+      <li><a>Icons</a></li>
+      <li><a>Layout & Grid</a></li>
+      <li><a>Spacings</a></li>
+      <li><a>Branding</a></li>
+    </ul>
+  </div>
+  <div class="page-anchor-nav">
+    <p class="anchor-nav-header">Page Nav</p>
+    <ul class="anchor-nav">
+      <li class="active" data-scroll-target="#primaryColors">Primary</li>
+      <li data-scroll-target="#secondaryColors">Secondary</li>
+      <li data-scroll-target="#statusColors">Status</li>
+      <li data-scroll-target="#accentColors">Accent</li>
+    </ul>
+  </div>
+  <div class="content-wrapper">
+    <h3 class="h3">Colors</h3>
+    <p class="page-description">We define the color values to keep unified look and feel across various UI components in our applications. Be aware that green, red and orange are only used to reflect status of validation. Colors are used to create consistent experiences across our products.</p>
+    <div class="section-header">
+      <div class="header-top">
+        <h4 class="h4" id="primaryColors">Primary</h4>
+        <ul class="button-group" id="primary-colors-button-group">
+          <li class="button-group-single active">Hex</li>
+          <li class="button-group-single">RGB</li>
+        </ul>
+      </div>
+    </div>
+    <ul class="colors-display-container">
+      <li class="single-color primaryBlueBG primaryWhiteText">
+        <div class="single-color-left">
+          <div class="single-color-name">Blue</div>
+          <div class="single-color-desc">Buttons, hyperlinks, selected state and informational status</div>
+        </div>
+        <div class="single-color-right color-hex">#1976D2</div>
+        <div class="single-color-right color-rgb">RGB(25,118,210)</div>
+      </li>
+    </ul>
+    <ul class="colors-display-container">
+      <li class="single-color primaryWhiteBG primaryBlackText gray04Border">
+        <div class="single-color-left">
+          <div class="single-color-name">White</div>
+          <div class="single-color-desc">Background color</div>
+        </div>
+        <div class="single-color-right color-hex">#FFFFFF</div>
+        <div class="single-color-right color-rgb">RGB(255,255,255)</div>
+      </li>
+    </ul>
+    <ul class="colors-display-container">
+      <li class="single-color primaryBlackBG primaryWhiteText">
+        <div class="single-color-left">
+          <div class="single-color-name">Black</div>
+          <div class="single-color-desc">Headings, titles, lists, tables and inputfields.</div>
+        </div>
+        <div class="single-color-right color-hex">#0F0F0F</div>
+        <div class="single-color-right color-rgb">RGB(15,15,15)</div>
+      </li>
+      <li class="single-color secondaryBlackBG primaryWhiteText">
+        <div class="single-color-left">
+          <div class="single-color-name">Black Secondary</div>
+          <div class="single-color-desc">Secondary title and dark background</div>
+        </div>
+        <div class="single-color-right color-hex">#313C4E</div>
+        <div class="single-color-right color-rgb">RGB(49,60,78)</div>
+      </li>
+      <li class="single-color tertiaryBlackBG primaryWhiteText">
+        <div class="single-color-left">
+          <div class="single-color-name">Black Tertiary</div>
+          <div class="single-color-desc">Tertiary title and dark background</div>
+        </div>
+        <div class="single-color-right color-hex">#444647</div>
+        <div class="single-color-right color-rgb">RGB(82,89,102)</div>
+      </li>
+    </ul>
+    <div class="section-header" id="secondaryColors">
+      <h4 class="h4">Secondary</h4>
+    </div>
+    <ul class="colors-display-container">
+      <li class="single-color blue09BG primaryWhiteText">
+        <div class="single-color-left">
+          <div class="single-color-name">Blue Secondary 09</div>
+          <div class="single-color-desc">Pressed state, selected page title in the side nav</div>
+        </div>
+        <div class="single-color-right color-hex">#0D47A1</div>
+        <div class="single-color-right color-rgb">RGB(13,71,161)</div>
+      </li>
+      <li class="single-color blue08BG primaryWhiteText">
+        <div class="single-color-left">
+          <div class="single-color-name">Blue Secondary 08</div>
+          <div class="single-color-desc">Hover state, selected chip title</div>
+        </div>
+        <div class="single-color-right color-hex">#1565C0</div>
+        <div class="single-color-right color-rgb">RGB(21,101,192)</div>
+      </li>
+      <li class="single-color blue07BG primaryBlackText">
+        <div class="single-color-left">
+          <div class="single-color-name">Blue Secondary 07</div>
+          <div class="single-color-desc">Large text</div>
+        </div>
+        <div class="single-color-right color-hex">#2196F3</div>
+        <div class="single-color-right color-rgb">RGB(33,150,243)</div>
+      </li>
+      <li class="single-color blue06BG primaryBlackText">
+        <div class="single-color-left">
+          <div class="single-color-name">Blue Secondary 06</div>
+          <div class="single-color-desc">Backround</div>
+        </div>
+        <div class="single-color-right color-hex">#66B2FF</div>
+        <div class="single-color-right color-rgb">RGB(102,178,255)</div>
+      </li>
+      <li class="single-color blue05BG primaryBlackText">
+        <div class="single-color-left">
+          <div class="single-color-name">Blue Secondary 05</div>
+          <div class="single-color-desc">Backround</div>
+        </div>
+        <div class="single-color-right color-hex">#80BFFF</div>
+        <div class="single-color-right color-rgb">RGB(128,191,255)</div>
+      </li>
+      <li class="single-color blue04BG primaryBlackText">
+        <div class="single-color-left">
+          <div class="single-color-name">Blue Secondary 04</div>
+          <div class="single-color-desc">Breadcrumb on dark background</div>
+        </div>
+        <div class="single-color-right color-hex">#99CBFF</div>
+        <div class="single-color-right color-rgb">RGB(153,203,255)</div>
+      </li>
+      <li class="single-color blue03BG primaryBlackText">
+        <div class="single-color-left">
+          <div class="single-color-name">Blue Secondary 03</div>
+          <div class="single-color-desc">Switch nob, background</div>
+        </div>
+        <div class="single-color-right color-hex">#B3D8FF</div>
+        <div class="single-color-right color-rgb">RGB(179,216,255)</div>
+      </li>
+      <li class="single-color blue02BG primaryBlackText">
+        <div class="single-color-left">
+          <div class="single-color-name">Blue Secondary 02</div>
+          <div class="single-color-desc">Switch handle, selected chip background</div>
+        </div>
+        <div class="single-color-right color-hex">#E5F2FF</div>
+        <div class="single-color-right color-rgb">RGB(229,242,255)</div>
+      </li>
+      <li class="single-color blue01BG primaryBlackText">
+        <div class="single-color-left">
+          <div class="single-color-name">Blue Secondary 01</div>
+          <div class="single-color-desc">Hover state, informational message background</div>
+        </div>
+        <div class="single-color-right color-hex">#FAFDFF</div>
+        <div class="single-color-right color-rgb">RGB(250,253,255)</div>
+      </li>
+    </ul>
+    <ul class="colors-display-container">
+      <li class="single-color gray06BG primaryWhiteText">
+        <div class="single-color-left">
+          <div class="single-color-name">Gray Secondary 06</div>
+          <div class="single-color-desc">Secondary title, inputfields and icon color</div>
+        </div>
+        <div class="single-color-right color-hex">#66B2FF</div>
+        <div class="single-color-right color-rgb">RGB(68,70,71)</div>
+      </li>
+      <li class="single-color gray05BG primaryWhiteText">
+        <div class="single-color-left">
+          <div class="single-color-name">Gray Secondary 05</div>
+          <div class="single-color-desc">Input fields</div>
+        </div>
+        <div class="single-color-right color-hex">#80BFFF</div>
+        <div class="single-color-right color-rgb">RGB(115,116,120)</div>
+      </li>
+      <li class="single-color gray04BG primaryBlackText">
+        <div class="single-color-left">
+          <div class="single-color-name">Gray Secondary 04</div>
+          <div class="single-color-desc">Input field underline, disabled state</div>
+        </div>
+        <div class="single-color-right color-hex">#99CBFF</div>
+        <div class="single-color-right color-rgb">RGB(207,207,207)</div>
+      </li>
+      <li class="single-color gray03BG primaryBlackText">
+        <div class="single-color-left">
+          <div class="single-color-name">Gray Secondary 03</div>
+          <div class="single-color-desc">Canvas background, dividers and scrollbars</div>
+        </div>
+        <div class="single-color-right color-hex">#B3D8FF</div>
+        <div class="single-color-right color-rgb">RGB(232,233,235)</div>
+      </li>
+      <li class="single-color gray02BG primaryBlackText">
+        <div class="single-color-left">
+          <div class="single-color-name">Gray Secondary 02</div>
+          <div class="single-color-desc">Input field background, hover highlight</div>
+        </div>
+        <div class="single-color-right color-hex">#E5F2FF</div>
+        <div class="single-color-right color-rgb">RGB(245,245,245)</div>
+      </li>
+      <li class="single-color gray01BG primaryBlackText">
+        <div class="single-color-left">
+          <div class="single-color-name">Gray Secondary 01</div>
+          <div class="single-color-desc">Drawer background</div>
+        </div>
+        <div class="single-color-right color-hex">#FAFDFF</div>
+        <div class="single-color-right color-rgb">RGB(250,250,250)</div>
+      </li>
+    </ul>
+    <div class="section-header">
+      <h4 class="h4" id="statusColors">Status</h4>
+    </div>
+    <ul class="colors-display-container">
+      <li class="single-color errorStateBG primaryWhiteText">
+        <div class="single-color-left">
+          <div class="single-color-name">Error State</div>
+          <div class="single-color-desc">Snackbars, error messages</div>
+        </div>
+        <div class="single-color-right color-hex">#D32F2F</div>
+        <div class="single-color-right color-rgb">RGB(211,47,47)</div>
+      </li>
+      <li class="single-color errorStateLightBG primaryWhiteText errorStateBorder">
+        <div class="single-color-left">
+          <div class="single-color-name errorStateText">Error State BG Light</div>
+          <div class="single-color-desc primaryBlackText">Error message background</div>
+        </div>
+        <div class="single-color-right primaryBlackText color-hex">#FFFAFA</div>
+        <div class="single-color-right primaryBlackText color-rgb">RGB(255,250,250)</div>
+      </li>
+    </ul>
+    <ul class="colors-display-container">
+      <li class="single-color successStateBG primaryWhiteText">
+        <div class="single-color-left">
+          <div class="single-color-name">Success State</div>
+          <div class="single-color-desc">Snackbars, success messages</div>
+        </div>
+        <div class="single-color-right color-hex">#308534</div>
+        <div class="single-color-right color-rgb">RGB(48,133,52)</div>
+      </li>
+      <li class="single-color successStateLightBG primaryWhiteText successStateBorder">
+        <div class="single-color-left">
+          <div class="single-color-name successStateText">Success State BG Light</div>
+          <div class="single-color-desc primaryBlackText">Success message background</div>
+        </div>
+        <div class="single-color-right primaryBlackText color-hex">#FAFFFA</div>
+        <div class="single-color-right primaryBlackText color-rgb">RGB(250,255,250)</div>
+      </li>
+    </ul>
+    <ul class="colors-display-container">
+      <li class="single-color warningStateBG primaryWhiteText">
+        <div class="single-color-left">
+          <div class="single-color-name">Warning State</div>
+          <div class="single-color-desc">Snackbars, warning messages</div>
+        </div>
+        <div class="single-color-right color-hex">#BD5800</div>
+        <div class="single-color-right color-rgb">RGB(189,88,0)</div>
+      </li>
+      <li class="single-color warningStateLightBG primaryWhiteText warningStateBorder">
+        <div class="single-color-left">
+          <div class="single-color-name warningStateText">Warning State BG Light</div>
+          <div class="single-color-desc primaryBlackText">Warning message background</div>
+        </div>
+        <div class="single-color-right primaryBlackText color-hex">#FFFEF2</div>
+        <div class="single-color-right primaryBlackText color-rgb">RGB(255,254,242)</div>
+      </li>
+    </ul>
+    <div class="section-header" id="accentColors">
+      <h4 class="h4">Accent</h4>
+      <p class="section-description">Graphics, charts, diagrams and data visualization</p>
+    </div>
+    <ul class="colors-display-container">
+      <li class="single-color accent06BG primaryWhiteText">
+        <div class="single-color-left">
+          <div class="single-color-name">Accent 06</div>
+          <div class="single-color-desc">Navy</div>
+        </div>
+        <div class="single-color-right color-hex">#6A6CEB</div>
+        <div class="single-color-right color-rgb">RGB(106,108,235)</div>
+      </li>
+      <li class="single-color accent05BG primaryWhiteText">
+        <div class="single-color-left">
+          <div class="single-color-name">Accent 05</div>
+          <div class="single-color-desc">Purple</div>
+        </div>
+        <div class="single-color-right color-hex">#737478</div>
+        <div class="single-color-right color-rgb">RGB(199,105,199)</div>
+      </li>
+      <li class="single-color accent04BG primaryBlackText">
+        <div class="single-color-left">
+          <div class="single-color-name">Accent 04</div>
+          <div class="single-color-desc">Salmon</div>
+        </div>
+        <div class="single-color-right color-hex">#FA7D7F</div>
+        <div class="single-color-right color-rgb">RGB(250,125,127)</div>
+      </li>
+      <li class="single-color accent03BG primaryBlackText">
+        <div class="single-color-left">
+          <div class="single-color-name">Accent 03</div>
+          <div class="single-color-desc">Amber</div>
+        </div>
+        <div class="single-color-right color-hex">#FFE45C</div>
+        <div class="single-color-right color-rgb">RGB(255,228,92)</div>
+      </li>
+      <li class="single-color accent02BG primaryBlackText">
+        <div class="single-color-left">
+          <div class="single-color-name">Accent 02</div>
+          <div class="single-color-desc">Pumpkin</div>
+        </div>
+        <div class="single-color-right color-hex">#EF693E</div>
+        <div class="single-color-right color-rgb">RGB(239,105,62)</div>
+      </li>
+      <li class="single-color accent01BG primaryBlackText">
+        <div class="single-color-left">
+          <div class="single-color-name">Accent 01</div>
+          <div class="single-color-desc">Teal</div>
+        </div>
+        <div class="single-color-right color-hex">#00B09B</div>
+        <div class="single-color-right color-rgb">RGB(0,176,155)</div>
+      </li>
+    </ul>
+  </div>
+  <div class="desktop-footer">
+    <div class="footer-left">
+      <div class="vitech-logo"></div>
+      <div class="copyright-info">Powered by &copy; Vitech Systems Sub LLC 2021. All rights reserved.</div>
+    </div>
+    <div class="footer-right">
+      <ul class="social-logos">
+        <li class="social-logo-single"><img src="images/fb.png"/></li>
+        <li class="social-logo-single"><img src="images/linkedin.png"/></li>
+        <li class="social-logo-single"><img src="images/twitter.png"/></li>
+      </ul>
+      <ul class="footer-links">
+        <li class="footer-link-single">Report a website problem</li>
+        <li class="footer-link-single">Privacy Policy</li>
+        <li class="footer-link-single">Help & Support</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Vitech DS - Tables</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="css/materialdesignicons.css">
+  <link rel="stylesheet/less" type="text/css" href="css/components.less">
+  <link rel="stylesheet/less" type="text/css" href="css/style.less">
+
+  <script src="scripts/less.js"></script>
+  <script src="scripts/jquery.js"></script>
+  <script src="scripts/materialize.min.js"></script>
+  <script type="text/javascript" src="scripts/jquery.scrollTo.min.js"></script>
+  <script src="scripts/components.js"></script>
+  <script src="scripts/ui.js"></script>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <a href="index.html">
+        <div class="DSLogo"></div>
+        <div class="DSName">Design System</div>
+        <div class="DSVersion">v 1.01</div>
+      </a>
+    </div>
+    <div class="top-bar-right">
+      <ul class="top-bar-nav">
+        <li><a href="principles.html">Principles & Guidelines</a></li>
+        <li class="active"><a href="#">Components</a></li>
+        <li><a>IxD Patterns</a></li>
+        <li><a href="colors.html">Foundations</a></li>
+        <li><a>Content</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="left-sidebar">
+    <ul class="desktop-sidenav">
+      <li><a href="buttons.html">Buttons</a></li>
+      <li><a href="inputfields.html">Input fields</a></li>
+      <li><a href="selection.html">Selection</a></li>
+      <!-- <li><a>Cards</a></li> -->
+      <li><a href="lists.html">Lists</a></li>
+      <li class="active"><a>Tables</a></li>
+      <li><a href="widgets.html">Widgets</a></li>
+      <li><a href="modals.html">Modals</a></li>
+      <!-- <li><a>Navigation</a></li> -->
+    </ul>
+  </div>
+  <!-- <div class="page-anchor-nav" id="designGuidelinesNav">
+    <p class="anchor-nav-header">Page Nav</p>
+    <ul class="anchor-nav">
+      <li class="active" data-scroll-target="#regularInputs">Regular</li>
+      <li data-scroll-target="#withIcon">With Icon</li>
+      <li data-scroll-target="#smallInputs">Small</li>
+      <li data-scroll-target="#floatingButtons">Textareas</li>
+      <li data-scroll-target="#iconButtons">Outlined</li>
+    </ul>
+  </div> -->
+  <div class="page-anchor-nav" id="designGuidelinesNav">
+    <p class="anchor-nav-header">Page Nav</p>
+    <ul class="table-of-contents anchor-nav">
+      <li><a href="#defaultTables">Default Tables</a></li>
+      <li><a href="#withActions">Tables with Actions</a></li>
+    </ul>
+  </div>
+  <!-- <div class="page-anchor-nav" id="usecasesNav" style="display: none;">
+    <p class="anchor-nav-header">Page Nav</p>
+    <ul class="anchor-nav">
+      <li class="active" data-scroll-target="#inWidgets">In Widgets</li>
+      <li data-scroll-target="#inModals">In Modals</li>
+      <li data-scroll-target="#inContent">Content</li>
+      <li data-scroll-target="#inOther">Other</li>
+    </ul>
+  </div> -->
+  <div class="content-wrapper">
+    <h3 class="h3">Tables</h3>
+    <p class="page-description">Tables and grids are important UI components for representing complex data and dashboards. Good data tables allow users to scan, analyze, compare, filter, sort, and manipulate information to derive insights and commit actions. This component is especially important for power users.</p>
+    <div class="tabs-wrapper">
+      <div class="tabs-hoz" id="buttonsPageTabs">
+        <ul class="tabs-list">
+          <li class="active" data-tabs-target="#designGuidelines">Design Guidelines</li>
+          <li data-tabs-target="#useCases">Use Cases</li>
+          <!-- <li data-tabs-target="#code">Code</li> -->
+        </ul>
+      </div>
+      <div class="tabs-hoz-container active" id="designGuidelines">
+        <div class="scrollspy" id="defaultTables">
+          <div class="section-header">
+            <div class="header-top">
+              <h4 class="h4">Default Tables</h4>
+            </div>
+            <p class="section-description">This variant of tables is used when no actions are required at the table row level. Columns indicating status, priority, etc. with icons are generally the first columns on the table.</p>
+            <!-- <h5 class="h5" id="regularButtons">Without Actions</h5> -->
+          </div>
+          <ul class="table-definition-container">
+            <table id="table-1">
+              <thead>
+                <tr>
+                    <th>Status</th>
+                    <th>Unique Column</th>
+                    <th>Uneditable Column</th>
+                    <th>Editable Column</th>
+                    <th>With Icon</th>
+                </tr>
+              </thead>
+      
+              <tbody>
+                <tr>
+                  <td class="table-cell-status">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="15.9998" cy="16" r="3.2" fill="#CFCFCF"/>
+                    </svg>     
+                  </td>
+                  <td class="table-cell-unique">
+                    Table Cell
+                    <span class="caret">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="table-cell-uneditable">
+                    Table Cell
+                  </td>
+                  <td class="table-cell-editable">
+                    <div class="input-field no-label">
+                      <input placeholder="Placeholder" id="" type="text" value="Table Cell">  
+                    </div>
+                  </td>
+                  <td class="table-cell-editable-icon">
+                    <div class="input-field no-label with-icon">
+                      <input placeholder="Placeholder" id="first_name" type="text" value="Table Cell">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.9998 15.2H15.9998V19.2H11.9998V15.2ZM21.5998 22.4H10.3998V13.6H21.5998V22.4ZM21.5998 9.6H20.7998V8H19.1998V9.6H12.7998V8H11.1998V9.6H10.3998C9.5118 9.6 8.7998 10.32 8.7998 11.2V22.4C8.7998 22.8243 8.96838 23.2313 9.26843 23.5314C9.56849 23.8314 9.97546 24 10.3998 24H21.5998C22.0242 24 22.4311 23.8314 22.7312 23.5314C23.0312 23.2313 23.1998 22.8243 23.1998 22.4V11.2C23.1998 10.7757 23.0312 10.3687 22.7312 10.0686C22.4311 9.76857 22.0242 9.6 21.5998 9.6Z"/>
+                      </svg>                      
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-cell-status">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.7998 11.528L13.1998 21.128L8.7998 16.728L9.9278 15.6L13.1998 18.864L21.6718 10.4L22.7998 11.528Z" fill="#308534"/>
+                    </svg>                               
+                  </td>
+                  <td class="table-cell-unique">
+                    Table Cell
+                    <span class="caret">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="table-cell-uneditable">
+                    Table Cell
+                  </td>
+                  <td class="table-cell-editable">
+                    <div class="input-field no-label">
+                      <input placeholder="Placeholder" id="" type="text" value="Table Cell">  
+                    </div>
+                  </td>
+                  <td class="table-cell-editable-icon">
+                    <div class="input-field no-label with-icon">
+                      <input placeholder="Placeholder" id="first_name" type="text" value="Table Cell">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.9998 15.2H15.9998V19.2H11.9998V15.2ZM21.5998 22.4H10.3998V13.6H21.5998V22.4ZM21.5998 9.6H20.7998V8H19.1998V9.6H12.7998V8H11.1998V9.6H10.3998C9.5118 9.6 8.7998 10.32 8.7998 11.2V22.4C8.7998 22.8243 8.96838 23.2313 9.26843 23.5314C9.56849 23.8314 9.97546 24 10.3998 24H21.5998C22.0242 24 22.4311 23.8314 22.7312 23.5314C23.0312 23.2313 23.1998 22.8243 23.1998 22.4V11.2C23.1998 10.7757 23.0312 10.3687 22.7312 10.0686C22.4311 9.76857 22.0242 9.6 21.5998 9.6Z"/>
+                      </svg>                      
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-cell-status">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="15.9998" cy="16" r="3.2" fill="#CFCFCF"/>
+                    </svg>                                              
+                  </td>
+                  <td class="table-cell-unique">
+                    Table Cell
+                    <span class="caret">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="table-cell-uneditable">
+                    Table Cell
+                  </td>
+                  <td class="table-cell-editable">
+                    <div class="input-field no-label">
+                      <input placeholder="Placeholder" id="" type="text" value="Table Cell">  
+                    </div>
+                  </td>
+                  <td class="table-cell-editable-icon">
+                    <div class="input-field no-label with-icon">
+                      <input placeholder="Placeholder" id="first_name" type="text" value="Table Cell">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.9998 15.2H15.9998V19.2H11.9998V15.2ZM21.5998 22.4H10.3998V13.6H21.5998V22.4ZM21.5998 9.6H20.7998V8H19.1998V9.6H12.7998V8H11.1998V9.6H10.3998C9.5118 9.6 8.7998 10.32 8.7998 11.2V22.4C8.7998 22.8243 8.96838 23.2313 9.26843 23.5314C9.56849 23.8314 9.97546 24 10.3998 24H21.5998C22.0242 24 22.4311 23.8314 22.7312 23.5314C23.0312 23.2313 23.1998 22.8243 23.1998 22.4V11.2C23.1998 10.7757 23.0312 10.3687 22.7312 10.0686C22.4311 9.76857 22.0242 9.6 21.5998 9.6Z"/>
+                      </svg>                      
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-cell-status">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.7998 11.528L13.1998 21.128L8.7998 16.728L9.9278 15.6L13.1998 18.864L21.6718 10.4L22.7998 11.528Z" fill="#308534"/>
+                    </svg>                                          
+                  </td>
+                  <td class="table-cell-unique">
+                    Table Cell
+                    <span class="caret">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="table-cell-uneditable">
+                    Table Cell
+                  </td>
+                  <td class="table-cell-editable">
+                    <div class="input-field no-label">
+                      <input placeholder="Placeholder" id="" type="text" value="Table Cell">  
+                    </div>
+                  </td>
+                  <td class="table-cell-editable-icon">
+                    <div class="input-field no-label with-icon">
+                      <input placeholder="Placeholder" id="first_name" type="text" value="Table Cell">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.9998 15.2H15.9998V19.2H11.9998V15.2ZM21.5998 22.4H10.3998V13.6H21.5998V22.4ZM21.5998 9.6H20.7998V8H19.1998V9.6H12.7998V8H11.1998V9.6H10.3998C9.5118 9.6 8.7998 10.32 8.7998 11.2V22.4C8.7998 22.8243 8.96838 23.2313 9.26843 23.5314C9.56849 23.8314 9.97546 24 10.3998 24H21.5998C22.0242 24 22.4311 23.8314 22.7312 23.5314C23.0312 23.2313 23.1998 22.8243 23.1998 22.4V11.2C23.1998 10.7757 23.0312 10.3687 22.7312 10.0686C22.4311 9.76857 22.0242 9.6 21.5998 9.6Z"/>
+                      </svg>                      
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-cell-status">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.7998 11.528L13.1998 21.128L8.7998 16.728L9.9278 15.6L13.1998 18.864L21.6718 10.4L22.7998 11.528Z" fill="#308534"/>
+                    </svg>                                            
+                  </td>
+                  <td class="table-cell-unique">
+                    Table Cell
+                    <span class="caret">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="table-cell-uneditable">
+                    Table Cell
+                  </td>
+                  <td class="table-cell-editable">
+                    <div class="input-field no-label">
+                      <input placeholder="Placeholder" id="" type="text" value="Table Cell">  
+                    </div>
+                  </td>
+                  <td class="table-cell-editable-icon">
+                    <div class="input-field no-label with-icon">
+                      <input placeholder="Placeholder" id="first_name" type="text" value="Table Cell">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.9998 15.2H15.9998V19.2H11.9998V15.2ZM21.5998 22.4H10.3998V13.6H21.5998V22.4ZM21.5998 9.6H20.7998V8H19.1998V9.6H12.7998V8H11.1998V9.6H10.3998C9.5118 9.6 8.7998 10.32 8.7998 11.2V22.4C8.7998 22.8243 8.96838 23.2313 9.26843 23.5314C9.56849 23.8314 9.97546 24 10.3998 24H21.5998C22.0242 24 22.4311 23.8314 22.7312 23.5314C23.0312 23.2313 23.1998 22.8243 23.1998 22.4V11.2C23.1998 10.7757 23.0312 10.3687 22.7312 10.0686C22.4311 9.76857 22.0242 9.6 21.5998 9.6Z"/>
+                      </svg>                      
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-cell-status">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.7998 11.528L13.1998 21.128L8.7998 16.728L9.9278 15.6L13.1998 18.864L21.6718 10.4L22.7998 11.528Z" fill="#308534"/>
+                    </svg>                                     
+                  </td>
+                  <td class="table-cell-unique">
+                    Table Cell
+                    <span class="caret">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="table-cell-uneditable">
+                    Table Cell
+                  </td>
+                  <td class="table-cell-editable">
+                    <div class="input-field no-label">
+                      <input placeholder="Placeholder" id="" type="text" value="Table Cell">  
+                    </div>
+                  </td>
+                  <td class="table-cell-editable-icon">
+                    <div class="input-field no-label with-icon">
+                      <input placeholder="Placeholder" id="first_name" type="text" value="Table Cell">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.9998 15.2H15.9998V19.2H11.9998V15.2ZM21.5998 22.4H10.3998V13.6H21.5998V22.4ZM21.5998 9.6H20.7998V8H19.1998V9.6H12.7998V8H11.1998V9.6H10.3998C9.5118 9.6 8.7998 10.32 8.7998 11.2V22.4C8.7998 22.8243 8.96838 23.2313 9.26843 23.5314C9.56849 23.8314 9.97546 24 10.3998 24H21.5998C22.0242 24 22.4311 23.8314 22.7312 23.5314C23.0312 23.2313 23.1998 22.8243 23.1998 22.4V11.2C23.1998 10.7757 23.0312 10.3687 22.7312 10.0686C22.4311 9.76857 22.0242 9.6 21.5998 9.6Z"/>
+                      </svg>                      
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-cell-status">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 8C20.4 8 24 11.6 24 16C24 20.4 20.4 24 16 24C11.6 24 8 20.4 8 16C8 11.6 11.6 8 16 8ZM16 9.6C14.48 9.6 13.12 10.08 12.08 10.96L21.04 19.92C21.84 18.8 22.4 17.44 22.4 16C22.4 12.48 19.52 9.6 16 9.6ZM19.92 21.04L10.96 12.08C10.08 13.12 9.6 14.48 9.6 16C9.6 19.52 12.48 22.4 16 22.4C17.52 22.4 18.88 21.92 19.92 21.04Z" fill="#D32F2F"/>
+                    </svg>                                                
+                  </td>
+                  <td class="table-cell-unique">
+                    Table Cell
+                    <span class="caret">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="table-cell-uneditable">
+                    Table Cell
+                  </td>
+                  <td class="table-cell-editable">
+                    <div class="input-field no-label">
+                      <input placeholder="Placeholder" id="" type="text" value="Table Cell">  
+                    </div>
+                  </td>
+                  <td class="table-cell-editable-icon">
+                    <div class="input-field no-label with-icon">
+                      <input placeholder="Placeholder" id="first_name" type="text" value="Table Cell">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.9998 15.2H15.9998V19.2H11.9998V15.2ZM21.5998 22.4H10.3998V13.6H21.5998V22.4ZM21.5998 9.6H20.7998V8H19.1998V9.6H12.7998V8H11.1998V9.6H10.3998C9.5118 9.6 8.7998 10.32 8.7998 11.2V22.4C8.7998 22.8243 8.96838 23.2313 9.26843 23.5314C9.56849 23.8314 9.97546 24 10.3998 24H21.5998C22.0242 24 22.4311 23.8314 22.7312 23.5314C23.0312 23.2313 23.1998 22.8243 23.1998 22.4V11.2C23.1998 10.7757 23.0312 10.3687 22.7312 10.0686C22.4311 9.76857 22.0242 9.6 21.5998 9.6Z"/>
+                      </svg>                      
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-cell-status">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 8C20.4 8 24 11.6 24 16C24 20.4 20.4 24 16 24C11.6 24 8 20.4 8 16C8 11.6 11.6 8 16 8ZM16 9.6C14.48 9.6 13.12 10.08 12.08 10.96L21.04 19.92C21.84 18.8 22.4 17.44 22.4 16C22.4 12.48 19.52 9.6 16 9.6ZM19.92 21.04L10.96 12.08C10.08 13.12 9.6 14.48 9.6 16C9.6 19.52 12.48 22.4 16 22.4C17.52 22.4 18.88 21.92 19.92 21.04Z" fill="#D32F2F"/>
+                    </svg>                                                
+                  </td>
+                  <td class="table-cell-unique">
+                    Table Cell
+                    <span class="caret">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="table-cell-uneditable">
+                    Table Cell
+                  </td>
+                  <td class="table-cell-editable">
+                    <div class="input-field no-label">
+                      <input placeholder="Placeholder" id="" type="text" value="Table Cell">  
+                    </div>
+                  </td>
+                  <td class="table-cell-editable-icon">
+                    <div class="input-field no-label with-icon">
+                      <input placeholder="Placeholder" id="first_name" type="text" value="Table Cell">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.9998 15.2H15.9998V19.2H11.9998V15.2ZM21.5998 22.4H10.3998V13.6H21.5998V22.4ZM21.5998 9.6H20.7998V8H19.1998V9.6H12.7998V8H11.1998V9.6H10.3998C9.5118 9.6 8.7998 10.32 8.7998 11.2V22.4C8.7998 22.8243 8.96838 23.2313 9.26843 23.5314C9.56849 23.8314 9.97546 24 10.3998 24H21.5998C22.0242 24 22.4311 23.8314 22.7312 23.5314C23.0312 23.2313 23.1998 22.8243 23.1998 22.4V11.2C23.1998 10.7757 23.0312 10.3687 22.7312 10.0686C22.4311 9.76857 22.0242 9.6 21.5998 9.6Z"/>
+                      </svg>                      
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-cell-status">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="15.9998" cy="16" r="3.2" fill="#CFCFCF"/>
+                    </svg>                                                 
+                  </td>
+                  <td class="table-cell-unique">
+                    Table Cell
+                    <span class="caret">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="table-cell-uneditable">
+                    Table Cell
+                  </td>
+                  <td class="table-cell-editable">
+                    <div class="input-field no-label">
+                      <input placeholder="Placeholder" id="" type="text" value="Table Cell">  
+                    </div>
+                  </td>
+                  <td class="table-cell-editable-icon">
+                    <div class="input-field no-label with-icon">
+                      <input placeholder="Placeholder" id="first_name" type="text" value="Table Cell">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.9998 15.2H15.9998V19.2H11.9998V15.2ZM21.5998 22.4H10.3998V13.6H21.5998V22.4ZM21.5998 9.6H20.7998V8H19.1998V9.6H12.7998V8H11.1998V9.6H10.3998C9.5118 9.6 8.7998 10.32 8.7998 11.2V22.4C8.7998 22.8243 8.96838 23.2313 9.26843 23.5314C9.56849 23.8314 9.97546 24 10.3998 24H21.5998C22.0242 24 22.4311 23.8314 22.7312 23.5314C23.0312 23.2313 23.1998 22.8243 23.1998 22.4V11.2C23.1998 10.7757 23.0312 10.3687 22.7312 10.0686C22.4311 9.76857 22.0242 9.6 21.5998 9.6Z"/>
+                      </svg>                      
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-cell-status">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="15.9998" cy="16" r="3.2" fill="#CFCFCF"/>
+                    </svg>                                                
+                  </td>
+                  <td class="table-cell-unique">
+                    Table Cell
+                    <span class="caret">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="table-cell-uneditable">
+                    Table Cell
+                  </td>
+                  <td class="table-cell-editable">
+                    <div class="input-field no-label">
+                      <input placeholder="Placeholder" id="" type="text" value="Table Cell">  
+                    </div>
+                  </td>
+                  <td class="table-cell-editable-icon">
+                    <div class="input-field no-label with-icon">
+                      <input placeholder="Placeholder" id="first_name" type="text" value="Table Cell">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.9998 15.2H15.9998V19.2H11.9998V15.2ZM21.5998 22.4H10.3998V13.6H21.5998V22.4ZM21.5998 9.6H20.7998V8H19.1998V9.6H12.7998V8H11.1998V9.6H10.3998C9.5118 9.6 8.7998 10.32 8.7998 11.2V22.4C8.7998 22.8243 8.96838 23.2313 9.26843 23.5314C9.56849 23.8314 9.97546 24 10.3998 24H21.5998C22.0242 24 22.4311 23.8314 22.7312 23.5314C23.0312 23.2313 23.1998 22.8243 23.1998 22.4V11.2C23.1998 10.7757 23.0312 10.3687 22.7312 10.0686C22.4311 9.76857 22.0242 9.6 21.5998 9.6Z"/>
+                      </svg>                      
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>    
+          </ul>
+        </div>
+        <div class="scrollspy" id="withActions">
+          <div class="section-header">
+            <div class="header-top">
+              <h4 class="h4">Tables with Actions</h4>
+            </div>
+            <p class="section-description">This variant of tables allows users to take quick actions at the table row level. Checkboxes are provided for the user to select one, multiple, or all rows in the view and perform bulk actions. The actions column positioned as the first column lets users find and perform actions quickly (versus having the column in any other position). Similar to lists, a maximum of two primary actions can be exposed as text buttons, and the rest are tucked inside the overflow menu.</p>
+            <!-- <h5 class="h5" id="regularButtons">Without Actions</h5> -->
+          </div>
+          <ul class="table-definition-container">
+            <table id="table-2">
+              <thead>
+                <tr>
+                  <th>
+                    <div class="input-checkbox">
+                      <label>
+                        <input type="checkbox" class="filled-in"/>
+                        <span>Actions</span>
+                      </label>
+                    </div>
+                  </th>
+                  <th>Unique Column</th>
+                  <th>Uneditable Column</th>
+                </tr>
+              </thead>
+      
+              <tbody>
+                <tr>
+                  <td class="table-cell-actions">
+                    <div class="input-checkbox icon-only">
+                      <label>
+                        <input type="checkbox" class="filled-in"/>
+                        <span></span>
+                      </label>
+                    </div>
+                    <div class="right-more-action">
+                      <span class="button-stacked item-spacing">
+                        <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                        <span class="icon-inline vds-icon">
+                          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"></path>
+                          </svg>
+                        </span>
+                      </span>
+                    </div>
+                    <p class="button16Text primaryBlueText">Button One</p>
+                    <p class="button16Text primaryBlueText">Button Two</p>
+                  </td>
+                  <td class="table-cell-unique">
+                    Table Cell
+                    <span class="caret">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="table-cell-uneditable">
+                    Table Cell
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-cell-actions">
+                    <div class="input-checkbox icon-only">
+                      <label>
+                        <input type="checkbox" class="filled-in"/>
+                        <span></span>
+                      </label>
+                    </div>
+                    <div class="right-more-action">
+                      <span class="button-stacked item-spacing">
+                        <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                        <span class="icon-inline vds-icon">
+                          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"></path>
+                          </svg>
+                        </span>
+                      </span>
+                    </div>
+                    <p class="button16Text primaryBlueText">Button One</p>
+                    <p class="button16Text primaryBlueText">Button Two</p>
+                  </td>
+                  <td class="table-cell-unique">
+                    Table Cell
+                    <span class="caret">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="table-cell-uneditable">
+                    Table Cell
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-cell-actions">
+                    <div class="input-checkbox icon-only">
+                      <label>
+                        <input type="checkbox" class="filled-in"/>
+                        <span></span>
+                      </label>
+                    </div>
+                    <div class="right-more-action">
+                      <span class="button-stacked item-spacing">
+                        <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                        <span class="icon-inline vds-icon">
+                          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"></path>
+                          </svg>
+                        </span>
+                      </span>
+                    </div>
+                    <p class="button16Text primaryBlueText">Button One</p>
+                    <p class="button16Text primaryBlueText">Button Two</p>
+                  </td>
+                  <td class="table-cell-unique">
+                    Table Cell
+                    <span class="caret">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="table-cell-uneditable">
+                    Table Cell
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-cell-actions">
+                    <div class="input-checkbox icon-only">
+                      <label>
+                        <input type="checkbox" class="filled-in"/>
+                        <span></span>
+                      </label>
+                    </div>
+                    <div class="right-more-action">
+                      <span class="button-stacked item-spacing">
+                        <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                        <span class="icon-inline vds-icon">
+                          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"></path>
+                          </svg>
+                        </span>
+                      </span>
+                    </div>
+                    <p class="button16Text primaryBlueText">Button One</p>
+                    <p class="button16Text primaryBlueText">Button Two</p>
+                  </td>
+                  <td class="table-cell-unique">
+                    Table Cell
+                    <span class="caret">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="table-cell-uneditable">
+                    Table Cell
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-cell-actions">
+                    <div class="input-checkbox icon-only">
+                      <label>
+                        <input type="checkbox" class="filled-in"/>
+                        <span></span>
+                      </label>
+                    </div>
+                    <div class="right-more-action">
+                      <span class="button-stacked item-spacing">
+                        <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                        <span class="icon-inline vds-icon">
+                          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"></path>
+                          </svg>
+                        </span>
+                      </span>
+                    </div>
+                    <p class="button16Text primaryBlueText">Button One</p>
+                    <p class="button16Text primaryBlueText">Button Two</p>
+                  </td>
+                  <td class="table-cell-unique">
+                    Table Cell
+                    <span class="caret">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="table-cell-uneditable">
+                    Table Cell
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-cell-actions">
+                    <div class="input-checkbox icon-only">
+                      <label>
+                        <input type="checkbox" class="filled-in"/>
+                        <span></span>
+                      </label>
+                    </div>
+                    <div class="right-more-action">
+                      <span class="button-stacked item-spacing">
+                        <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                        <span class="icon-inline vds-icon">
+                          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"></path>
+                          </svg>
+                        </span>
+                      </span>
+                    </div>
+                    <p class="button16Text primaryBlueText">Button One</p>
+                    <p class="button16Text primaryBlueText">Button Two</p>
+                  </td>
+                  <td class="table-cell-unique">
+                    Table Cell
+                    <span class="caret">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="table-cell-uneditable">
+                    Table Cell
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-cell-actions">
+                    <div class="input-checkbox icon-only">
+                      <label>
+                        <input type="checkbox" class="filled-in"/>
+                        <span></span>
+                      </label>
+                    </div>
+                    <div class="right-more-action">
+                      <span class="button-stacked item-spacing">
+                        <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                        <span class="icon-inline vds-icon">
+                          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"></path>
+                          </svg>
+                        </span>
+                      </span>
+                    </div>
+                    <p class="button16Text primaryBlueText">Button One</p>
+                    <p class="button16Text primaryBlueText">Button Two</p>
+                  </td>
+                  <td class="table-cell-unique">
+                    Table Cell
+                    <span class="caret">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="table-cell-uneditable">
+                    Table Cell
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-cell-actions">
+                    <div class="input-checkbox icon-only">
+                      <label>
+                        <input type="checkbox" class="filled-in"/>
+                        <span></span>
+                      </label>
+                    </div>
+                    <div class="right-more-action">
+                      <span class="button-stacked item-spacing">
+                        <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                        <span class="icon-inline vds-icon">
+                          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"></path>
+                          </svg>
+                        </span>
+                      </span>
+                    </div>
+                    <p class="button16Text primaryBlueText">Button One</p>
+                    <p class="button16Text primaryBlueText">Button Two</p>
+                  </td>
+                  <td class="table-cell-unique">
+                    Table Cell
+                    <span class="caret">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="table-cell-uneditable">
+                    Table Cell
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-cell-actions">
+                    <div class="input-checkbox icon-only">
+                      <label>
+                        <input type="checkbox" class="filled-in"/>
+                        <span></span>
+                      </label>
+                    </div>
+                    <div class="right-more-action">
+                      <span class="button-stacked item-spacing">
+                        <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                        <span class="icon-inline vds-icon">
+                          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"></path>
+                          </svg>
+                        </span>
+                      </span>
+                    </div>
+                    <p class="button16Text primaryBlueText">Button One</p>
+                    <p class="button16Text primaryBlueText">Button Two</p>
+                  </td>
+                  <td class="table-cell-unique">
+                    Table Cell
+                    <span class="caret">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="table-cell-uneditable">
+                    Table Cell
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-cell-actions">
+                    <div class="input-checkbox icon-only">
+                      <label>
+                        <input type="checkbox" class="filled-in"/>
+                        <span></span>
+                      </label>
+                    </div>
+                    <div class="right-more-action">
+                      <span class="button-stacked item-spacing">
+                        <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                        <span class="icon-inline vds-icon">
+                          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"></path>
+                          </svg>
+                        </span>
+                      </span>
+                    </div>
+                    <p class="button16Text primaryBlueText">Button One</p>
+                    <p class="button16Text primaryBlueText">Button Two</p>
+                  </td>
+                  <td class="table-cell-unique">
+                    Table Cell
+                    <span class="caret">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                      </svg>
+                    </span>
+                  </td>
+                  <td class="table-cell-uneditable">
+                    Table Cell
+                  </td>
+                </tr>
+              </tbody>
+            </table>    
+          </ul>
+        </div>
+        <div class="scrollspy" id="withActions">
+          <div class="section-header">
+            <div class="header-top">
+              <h4 class="h4">Tables in Widgets</h4>
+            </div>
+            <p class="section-description">This variant of tables allows users to take quick actions at the table row level. Checkboxes are provided for the user to select one, multiple, or all rows in the view and perform bulk actions. The actions column positioned as the first column lets users find and perform actions quickly (versus having the column in any other position). Similar to lists, a maximum of two primary actions can be exposed as text buttons, and the rest are tucked inside the overflow menu.</p>
+            <!-- <h5 class="h5" id="regularButtons">Without Actions</h5> -->
+          </div>
+          <div class="widget-container">
+            <div class="widget-header">
+              <div class="left-widget-name">H6 Widget Name</div>
+              <div class="right-widget-actions">
+                <span class="button16Text primaryBlueText">Button One</span>
+                <span class="button16Text primaryBlueText">Button One</span>
+                <span class="button-stacked item-spacing">
+                  <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                  <span class="icon-inline vds-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"/>
+                    </svg>
+                  </span>
+                  <span class="button-text">More</span>
+                </span>
+                <span class="button-stacked item-spacing">
+                  <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                  <span class="icon-inline vds-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M18.0667 16.3988V23.7525C18.1133 24.0324 17.9967 24.3311 17.7284 24.527C17.2735 24.891 16.5386 24.891 16.0837 24.527L13.7391 22.6513C13.4708 22.4367 13.3541 22.1474 13.4008 21.8767V16.3988H13.3658L6.64689 9.51179C6.25029 9.11051 6.34361 8.52259 6.84519 8.2053C7.06682 8.07466 7.31178 8 7.56841 8H23.899C24.1557 8 24.4006 8.07466 24.6223 8.2053C25.1238 8.52259 25.2172 9.11051 24.8206 9.51179L18.1017 16.3988H18.0667Z"/>
+                    </svg>                    
+                  </span>
+                  <span class="button-text">Filters</span>
+                </span>
+              </div>
+            </div>
+            <div class="widget-chips-container">
+              <div class="chip selectable selected">All</div>
+              <div class="chip selectable">Category1</div>
+              <div class="chip selectable">Category2</div>
+              <div class="chip selectable">Category3</div>
+              <div class="chip selectable">Category4</div>
+              <div class="chip selectable">Category5</div>
+            </div>
+            <div class="widget-body">
+              <ul class="table-definition-container in-widget">
+                <table id="table-3">
+                  <thead>
+                    <tr>
+                      <th>
+                        <div class="input-checkbox">
+                          <label>
+                            <input type="checkbox" class="filled-in"/>
+                            <span>Actions</span>
+                          </label>
+                        </div>
+                      </th>
+                      <th>Unique Column</th>
+                      <th>Uneditable Column</th>
+                    </tr>
+                  </thead>
+          
+                  <tbody>
+                    <tr>
+                      <td class="table-cell-actions">
+                        <div class="input-checkbox icon-only">
+                          <label>
+                            <input type="checkbox" class="filled-in"/>
+                            <span></span>
+                          </label>
+                        </div>
+                        <div class="right-more-action">
+                          <span class="button-stacked item-spacing">
+                            <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                            <span class="icon-inline vds-icon">
+                              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"></path>
+                              </svg>
+                            </span>
+                          </span>
+                        </div>
+                        <p class="button16Text primaryBlueText">Button One</p>
+                        <p class="button16Text primaryBlueText">Button Two</p>
+                      </td>
+                      <td class="table-cell-unique">
+                        Table Cell
+                        <span class="caret">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                          </svg>
+                        </span>
+                      </td>
+                      <td class="table-cell-uneditable">
+                        Table Cell
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table-cell-actions">
+                        <div class="input-checkbox icon-only">
+                          <label>
+                            <input type="checkbox" class="filled-in"/>
+                            <span></span>
+                          </label>
+                        </div>
+                        <div class="right-more-action">
+                          <span class="button-stacked item-spacing">
+                            <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                            <span class="icon-inline vds-icon">
+                              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"></path>
+                              </svg>
+                            </span>
+                          </span>
+                        </div>
+                        <p class="button16Text primaryBlueText">Button One</p>
+                        <p class="button16Text primaryBlueText">Button Two</p>
+                      </td>
+                      <td class="table-cell-unique">
+                        Table Cell
+                        <span class="caret">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                          </svg>
+                        </span>
+                      </td>
+                      <td class="table-cell-uneditable">
+                        Table Cell
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table-cell-actions">
+                        <div class="input-checkbox icon-only">
+                          <label>
+                            <input type="checkbox" class="filled-in"/>
+                            <span></span>
+                          </label>
+                        </div>
+                        <div class="right-more-action">
+                          <span class="button-stacked item-spacing">
+                            <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                            <span class="icon-inline vds-icon">
+                              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"></path>
+                              </svg>
+                            </span>
+                          </span>
+                        </div>
+                        <p class="button16Text primaryBlueText">Button One</p>
+                        <p class="button16Text primaryBlueText">Button Two</p>
+                      </td>
+                      <td class="table-cell-unique">
+                        Table Cell
+                        <span class="caret">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                          </svg>
+                        </span>
+                      </td>
+                      <td class="table-cell-uneditable">
+                        Table Cell
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table-cell-actions">
+                        <div class="input-checkbox icon-only">
+                          <label>
+                            <input type="checkbox" class="filled-in"/>
+                            <span></span>
+                          </label>
+                        </div>
+                        <div class="right-more-action">
+                          <span class="button-stacked item-spacing">
+                            <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                            <span class="icon-inline vds-icon">
+                              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"></path>
+                              </svg>
+                            </span>
+                          </span>
+                        </div>
+                        <p class="button16Text primaryBlueText">Button One</p>
+                        <p class="button16Text primaryBlueText">Button Two</p>
+                      </td>
+                      <td class="table-cell-unique">
+                        Table Cell
+                        <span class="caret">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                          </svg>
+                        </span>
+                      </td>
+                      <td class="table-cell-uneditable">
+                        Table Cell
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table-cell-actions">
+                        <div class="input-checkbox icon-only">
+                          <label>
+                            <input type="checkbox" class="filled-in"/>
+                            <span></span>
+                          </label>
+                        </div>
+                        <div class="right-more-action">
+                          <span class="button-stacked item-spacing">
+                            <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                            <span class="icon-inline vds-icon">
+                              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"></path>
+                              </svg>
+                            </span>
+                          </span>
+                        </div>
+                        <p class="button16Text primaryBlueText">Button One</p>
+                        <p class="button16Text primaryBlueText">Button Two</p>
+                      </td>
+                      <td class="table-cell-unique">
+                        Table Cell
+                        <span class="caret">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                          </svg>
+                        </span>
+                      </td>
+                      <td class="table-cell-uneditable">
+                        Table Cell
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table-cell-actions">
+                        <div class="input-checkbox icon-only">
+                          <label>
+                            <input type="checkbox" class="filled-in"/>
+                            <span></span>
+                          </label>
+                        </div>
+                        <div class="right-more-action">
+                          <span class="button-stacked item-spacing">
+                            <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                            <span class="icon-inline vds-icon">
+                              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"></path>
+                              </svg>
+                            </span>
+                          </span>
+                        </div>
+                        <p class="button16Text primaryBlueText">Button One</p>
+                        <p class="button16Text primaryBlueText">Button Two</p>
+                      </td>
+                      <td class="table-cell-unique">
+                        Table Cell
+                        <span class="caret">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                          </svg>
+                        </span>
+                      </td>
+                      <td class="table-cell-uneditable">
+                        Table Cell
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table-cell-actions">
+                        <div class="input-checkbox icon-only">
+                          <label>
+                            <input type="checkbox" class="filled-in"/>
+                            <span></span>
+                          </label>
+                        </div>
+                        <div class="right-more-action">
+                          <span class="button-stacked item-spacing">
+                            <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                            <span class="icon-inline vds-icon">
+                              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"></path>
+                              </svg>
+                            </span>
+                          </span>
+                        </div>
+                        <p class="button16Text primaryBlueText">Button One</p>
+                        <p class="button16Text primaryBlueText">Button Two</p>
+                      </td>
+                      <td class="table-cell-unique">
+                        Table Cell
+                        <span class="caret">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                          </svg>
+                        </span>
+                      </td>
+                      <td class="table-cell-uneditable">
+                        Table Cell
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table-cell-actions">
+                        <div class="input-checkbox icon-only">
+                          <label>
+                            <input type="checkbox" class="filled-in"/>
+                            <span></span>
+                          </label>
+                        </div>
+                        <div class="right-more-action">
+                          <span class="button-stacked item-spacing">
+                            <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                            <span class="icon-inline vds-icon">
+                              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"></path>
+                              </svg>
+                            </span>
+                          </span>
+                        </div>
+                        <p class="button16Text primaryBlueText">Button One</p>
+                        <p class="button16Text primaryBlueText">Button Two</p>
+                      </td>
+                      <td class="table-cell-unique">
+                        Table Cell
+                        <span class="caret">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                          </svg>
+                        </span>
+                      </td>
+                      <td class="table-cell-uneditable">
+                        Table Cell
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table-cell-actions">
+                        <div class="input-checkbox icon-only">
+                          <label>
+                            <input type="checkbox" class="filled-in"/>
+                            <span></span>
+                          </label>
+                        </div>
+                        <div class="right-more-action">
+                          <span class="button-stacked item-spacing">
+                            <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                            <span class="icon-inline vds-icon">
+                              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"></path>
+                              </svg>
+                            </span>
+                          </span>
+                        </div>
+                        <p class="button16Text primaryBlueText">Button One</p>
+                        <p class="button16Text primaryBlueText">Button Two</p>
+                      </td>
+                      <td class="table-cell-unique">
+                        Table Cell
+                        <span class="caret">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                          </svg>
+                        </span>
+                      </td>
+                      <td class="table-cell-uneditable">
+                        Table Cell
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table-cell-actions">
+                        <div class="input-checkbox icon-only">
+                          <label>
+                            <input type="checkbox" class="filled-in"/>
+                            <span></span>
+                          </label>
+                        </div>
+                        <div class="right-more-action">
+                          <span class="button-stacked item-spacing">
+                            <!-- <span class="mdi mdi-16px mdi-chevron-right icon-inline"></span> -->
+                            <span class="icon-inline vds-icon">
+                              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 20C16.5304 20 17.0391 20.2107 17.4142 20.5858C17.7893 20.9609 18 21.4696 18 22C18 22.5304 17.7893 23.0391 17.4142 23.4142C17.0391 23.7893 16.5304 24 16 24C15.4696 24 14.9609 23.7893 14.5858 23.4142C14.2107 23.0391 14 22.5304 14 22C14 21.4696 14.2107 20.9609 14.5858 20.5858C14.9609 20.2107 15.4696 20 16 20ZM16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14ZM16 8C16.5304 8 17.0391 8.21071 17.4142 8.58579C17.7893 8.96086 18 9.46957 18 10C18 10.5304 17.7893 11.0391 17.4142 11.4142C17.0391 11.7893 16.5304 12 16 12C15.4696 12 14.9609 11.7893 14.5858 11.4142C14.2107 11.0391 14 10.5304 14 10C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8Z"></path>
+                              </svg>
+                            </span>
+                          </span>
+                        </div>
+                        <p class="button16Text primaryBlueText">Button One</p>
+                        <p class="button16Text primaryBlueText">Button Two</p>
+                      </td>
+                      <td class="table-cell-unique">
+                        Table Cell
+                        <span class="caret">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 15.672L12.672 12.0001L9 8.32805L10.136 7.20005L14.936 12.0001L10.136 16.8L9 15.672Z" fill="#0F0F0F"/>
+                          </svg>
+                        </span>
+                      </td>
+                      <td class="table-cell-uneditable">
+                        Table Cell
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>    
+              </ul>
+            </div>
+            <div class="pagination-container">
+              <div class="pagination-page-number">1-5 of 20</div>
+              <div class="pagination-arrows">
+                <svg class="disabled" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.2 11.1041L14.304 16.0001L19.2 20.8961L17.6853 22.4001L11.2853 16.0001L17.6853 9.6001L19.2 11.1041Z"/>
+                </svg>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.8 20.8959L17.696 15.9999L12.8 11.1039L14.3147 9.59991L20.7147 15.9999L14.3147 22.3999L12.8 20.8959Z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tabs-hoz-container" id="useCases">
+      </div>
+    </div>
+  </div>
+  <div class="desktop-footer">
+    <div class="footer-left">
+      <div class="vitech-logo"></div>
+      <div class="copyright-info">Powered by &copy; Vitech Systems Sub LLC 2021. All rights reserved.</div>
+    </div>
+    <div class="footer-right">
+      <ul class="social-logos">
+        <li class="social-logo-single"><img src="images/fb.png"/></li>
+        <li class="social-logo-single"><img src="images/linkedin.png"/></li>
+        <li class="social-logo-single"><img src="images/twitter.png"/></li>
+      </ul>
+      <ul class="footer-links">
+        <li class="footer-link-single">Report a website problem</li>
+        <li class="footer-link-single">Privacy Policy</li>
+        <li class="footer-link-single">Help & Support</li>
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+    $('.scrollspy').scrollSpy();
+  });
+  </script>
+  <style>
+</style>
+</body>
+</html>
